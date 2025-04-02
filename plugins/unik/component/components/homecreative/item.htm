@@ -1,0 +1,27 @@
+
+	<div class="item wow fadeInUp">
+		<div class="image" style="background-image:url('{{ item.image|media }}');background-size: cover;background-position: center;background-repeat: no-repeat;">
+		</div>
+		<div class="info">
+			<div class="name">
+				{{ html_limit(item.name, 80, '...')|raw }}
+			</div>
+			<div class="description">
+				{{ html_limit(item.description, 200, '...')|raw }}
+			</div>	
+
+			{% partial __SELF__ ~ '::rating' index=item.rating of=5%}	
+			{% if item.most_searched%}
+				{% partial __SELF__ ~ '::most-searched' %}	
+			{% endif %} 			
+			{% if item.is_hot%}
+				{% partial __SELF__ ~ '::hot' %}
+			{% endif %} 	
+		</div>
+		<div class="footer">
+			<button class="handson-btn" onclick="showRegisterModal({{item.id}})"><img class="icon-img" src="{{ 'assets/images/icon/Dangky.svg'|theme }}">Đăng ký</button>
+		</div>
+		{% if "now"|date("m/d/Y") == date(item.created_at)|date("m/d/Y") %}
+		  {% partial __SELF__ ~ '::new' %}
+		{% endif %}		
+	</div>

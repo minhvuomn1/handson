@@ -1,0 +1,10 @@
+name: HomeSosial
+form: $/unik/component/models/homesosial/fields.yaml
+modelClass: Unik\Component\Models\HomeSosial
+defaultRedirect: unik/component/homesosial
+create:
+    redirect: 'unik/component/homesosial/update/:id'
+    redirectClose: unik/component/homesosial
+update:
+    redirect: unik/component/homesosial
+    redirectClose: unik/component/homesosial

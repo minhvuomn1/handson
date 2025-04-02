@@ -1,0 +1,10 @@
+name: HomeContent
+form: $/unik/component/models/homecontent/fields.yaml
+modelClass: Unik\Component\Models\HomeContent
+defaultRedirect: unik/component/homecontent
+create:
+    redirect: 'unik/component/homecontent/update/:id'
+    redirectClose: unik/component/homecontent
+update:
+    redirect: unik/component/homecontent
+    redirectClose: unik/component/homecontent

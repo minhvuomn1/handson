@@ -1,0 +1,4 @@
+title: BlocBanner
+modelClass: Unik\Bloc\Models\BlocBanner
+toolbar:
+    buttons: reorder_toolbar

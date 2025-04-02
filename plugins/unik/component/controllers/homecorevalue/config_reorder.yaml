@@ -1,0 +1,4 @@
+title: HomeCorevalue
+modelClass: Unik\Component\Models\HomeCorevalue
+toolbar:
+    buttons: reorder_toolbar

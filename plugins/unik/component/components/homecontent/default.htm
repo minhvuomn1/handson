@@ -1,0 +1,17 @@
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/home/content.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% set records = __SELF__.records %}
+<div class="home-container">
+    <div class="container">
+      <div class="Home-Content">
+        {% for key, record in records %}
+          {% if key % 2 == 0 %}
+            {% partial __SELF__ ~ '::right-item' item=record%}
+          {% else %}
+            {% partial __SELF__ ~ '::left-item' item=record%}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+</div>      

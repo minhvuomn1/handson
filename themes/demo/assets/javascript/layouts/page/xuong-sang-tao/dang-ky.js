@@ -1,0 +1,1 @@
+"use strict";function onRegisterSuccess(e){$("form")[0].reset()}

@@ -1,0 +1,40 @@
+{% set records = __SELF__.records %}
+{% set title = __SELF__.title %}
+{% set description = __SELF__.description %}
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/home/creative.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% put scripts %}
+    <script type="text/javascript" src="{{ 'assets/javascript/layouts/page/home/creative.js'|theme }}"></script>
+{% endput %}
+<div class="home-creative">
+    <div class="header-bg">
+        <img class="bg2" src="{{ 'home/bg2.png'|media }}">
+        <div class="banner" style="background-image: url({{ 'home/creative/banner.jpg'|media }});"></div>
+        <img class="bg1" src="{{ 'home/bg1.png'|media }}">
+    </div>
+    <div class="container">
+      <div class="info-view">
+      	<div class="title wow fadeInUp">{{title}}</div>
+      	<div class="description wow fadeInUp">{{description}}</div>
+      </div>
+        <div class="row equal-height">
+            {% for key, record in records %}
+                <div class="col-md-4">
+                    <div class="creative-item">
+                        {% partial __SELF__ ~ '::item' item=record%}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>      
+<!--       <div class="slick" >
+        <div class="multiple-items-3">
+            {% for key, record in records %}
+                <div class="carousel-item creative-item">
+                    {% partial __SELF__ ~ '::item' item=record%}
+                </div>
+            {% endfor %}
+        </div>	
+      </div> -->
+    </div>    
+</div>

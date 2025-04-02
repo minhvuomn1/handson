@@ -1,0 +1,47 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    title:
+        label: Title
+        span: auto
+        type: text
+    description:
+        label: Description
+        size: large
+        span: full
+        type: richeditor
+    image:
+        label: Image
+        mode: image
+        span: auto
+        type: mediafinder
+    url_seemore:
+        label: 'Link Xem Thêm'
+        span: auto
+        type: text
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        type: number
+    has_button:
+        label: Button
+        span: auto
+        type: switch
+    name_button:
+        label: 'Tên Button'
+        span: auto
+        type: text
+        trigger:
+            action: show
+            field: has_button
+            condition: checked
+    url_button:
+        label: 'Link Button'
+        span: auto
+        type: text
+        trigger:
+            action: show
+            field: has_button
+            condition: checked

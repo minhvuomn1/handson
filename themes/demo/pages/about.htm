@@ -1,0 +1,139 @@
+url = "/about"
+layout = "default"
+title = "About"
+
+[HomeBanner]
+[HomeRegistration]
+==
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/about.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% component 'HomeBanner' %}
+<div class="Home-About-Page Page">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{'home'|page}}"><i class="fas fa-home"></i> Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Giới thiệu chung</li>
+          </ol>
+        </nav>        
+    </div>    
+    <div class="home-container">
+        <div class="container">
+          <div class="Home-Content">
+            <div class="left-item item">
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="content-name">Về chúng tôi</div>
+                    <div class="content-title">Lorem ipsum dolor sit<br>ametLorem ipsum dolor sit</div>
+                    <div class="content-description">
+                        Hands-On là một tổ chức phi lợi nhuận được thành lập dưới hình thức Doanh Nghiệp Xã Hội, cam kết 100% số tiền gây quỹ và 100% lợi nhuận của mọi hoạt động đều được sử dụng cho các dự án giáo dục cộng đồng tại Việt Nam một cách hiệu quả và minh bạch.
+                    </div>
+                    <div>
+                        <a href="">
+                            <button class="handson-btn"><img class="icon-img" src="{{ 'assets/images/icon/Dangky.svg'|theme }}">Đăng Ký</button>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <img src="{{ 'home/img1.jpg'|media }}"
+                                    loading="lazy"
+                                    alt="Về chúng tôi"
+                                >
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>  
+    <div class="video-view">
+
+        <div class="banner image-shadow justify-content-center d-flex align-items-center" style="background-image:url({{ 'assets/images/about/vd-bn.jpeg'|theme }});">
+                <button class="video-btn"
+                  type="button"
+                  class="btn btn-primary"
+                  data-mdb-toggle="modal"
+                  data-mdb-target="#VideoModal"                
+                  >
+                    <img src="{{ 'assets/images/about/Group_801.svg'|theme }}">
+                </button>
+        </div>
+        <div class="bg1">
+            <img src="{{ 'assets/images/about/Path_756.svg'|theme }}">
+        </div>   
+        <div class="bg2">
+            <img src="{{ 'assets/images/about/Path_757.svg'|theme }}">
+        </div>              
+    </div>
+    <div class="hobg-view">
+        <div class="container">
+            <div class="title t-center">
+                Hands-On bao gồm
+            </div>
+            <div class="content-view">
+                <div class="row justify-content-center">
+                    <div class="col-md-4 item-left">
+                        <div class="hobg-item">
+                            <div class="image-view">
+                                <img src="{{ 'assets/images/about/Group_580.svg'|theme }}"> 
+                            </div>
+                            <div class="info-view">
+                                <div>
+                                    <strong>
+                                        Quỹ học bổng hỗ trợ toàn diện cho những học sinh có tiềm năng nhưng gặp hoàn cảnh khó khăn ở vùng đồng bằng sông Cửu Long             
+                                    </strong>       
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="col-md-4 item-right">
+                        <div class="hobg-item">
+                            <div class="image-view">
+                                <img src="{{ 'assets/images/about/Group_584.svg'|theme }}"> 
+                            </div>
+                            <div class="info-view">
+                                <div>
+                                    <strong>
+                                        Không gian trải nghiệm kết nối dành cho gia đình có lối sống thành thị thông qua chuỗi hoạt động workshop về văn hóa, nghệ thuật         
+                                    </strong>       
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>                    
+                </div>
+            </div>
+        </div>
+
+    </div> 
+</div>
+{% component 'HomeRegistration' %}
+<div
+  class="modal fade"
+  id="VideoModal"
+  tabindex="-1"
+  aria-labelledby="VideoModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="VideoModalLabel"></h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-mdb-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="ratio ratio-16x9">
+          <iframe
+            src="https://www.youtube.com/embed/vlDzYIIOYmM"
+            title="YouTube video"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

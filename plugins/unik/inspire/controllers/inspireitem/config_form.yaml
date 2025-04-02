@@ -1,0 +1,10 @@
+name: InspireItem
+form: $/unik/inspire/models/inspireitem/fields.yaml
+modelClass: Unik\Inspire\Models\InspireItem
+defaultRedirect: unik/inspire/inspireitem
+create:
+    redirect: 'unik/inspire/inspireitem/update/:id'
+    redirectClose: unik/inspire/inspireitem
+update:
+    redirect: unik/inspire/inspireitem
+    redirectClose: unik/inspire/inspireitem

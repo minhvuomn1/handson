@@ -1,0 +1,10 @@
+{% if __SELF__.menuItems %}
+    {% if __SELF__.menuName == 'Footer' %}
+        {% partial __SELF__ ~ "::footer/items" items=__SELF__.menuItems %}
+    {% else %} 
+        <ul class="navbar-nav">
+            {% partial __SELF__ ~ "::items" items=__SELF__.menuItems %}
+        </ul>    
+    {% endif %} 
+
+{% endif %}

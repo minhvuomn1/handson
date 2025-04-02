@@ -1,0 +1,25 @@
+url = "/inspire"
+layout = "default"
+title = "Câu chuyện Inspire"
+
+[InspireView]
+[HomeBanner]
+==
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/inspire.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% component 'HomeBanner' %}
+<div class="Inspire-Page Page">	
+	<div class="InspireView">
+		<div class="bg1">
+			<img src="{{ 'assets/images/about/inspire_bg1.png'|theme }}">
+		</div>
+		<div class="bg2">
+			<img src="{{ 'assets/images/about/inspire_bg2.png'|theme }}">
+		</div>
+		<div class="bg3">
+			<img src="{{ 'assets/images/about/inspire_bg3.png'|theme }}">
+		</div>				
+		{% component 'InspireView' %}
+	</div>
+</div>

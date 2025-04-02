@@ -1,0 +1,41 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        cssClass: ''
+        type: text
+    image:
+        label: Image
+        mode: image
+        span: auto
+        type: mediafinder
+    is_hot:
+        label: 'Is Hot'
+        span: auto
+        type: switch
+    most_searched:
+        label: 'Most Searched'
+        span: auto
+        type: switch
+    rating:
+        label: Rating
+        options:
+            - 0/5
+            - 1/5
+            - 2/5
+            - 3/5
+            - 4/5
+            - 5/5
+        span: full
+        cssClass: inline-options
+        type: radio
+    description:
+        label: Description
+        size: large
+        span: full
+        type: richeditor
+    content:
+        label: Content
+        size: giant
+        span: full
+        type: richeditor

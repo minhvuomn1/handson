@@ -1,0 +1,6 @@
+export:
+  title: Export customer
+  modelClass: Unik\Creative\Models\CreativeItemExport
+  list: $/unik/creative/models/creativeitemexport/columns.yaml
+  fileName: customer.csv
+  form: $/unik/creative/models/creativeitemexport/fields.yaml

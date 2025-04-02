@@ -1,0 +1,15 @@
+columns:
+    name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+    created_at:
+        label: 'Created At'
+        type: datetime
+        searchable: true
+        sortable: true
+    is_hot:
+        label: Hot
+        type: switch
+        sortable: true

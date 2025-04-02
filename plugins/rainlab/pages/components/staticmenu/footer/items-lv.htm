@@ -1,0 +1,12 @@
+{% for item in items if not item.viewBag.isHidden %}
+	<div class="item">
+		{% if item.viewBag.cssClass %}
+			<i class="{{item.viewBag.cssClass}}"></i>
+		{% endif %}
+		{% if item.url %}
+			<a href="{{ item.url }}">{{ item.title }}</a>
+		{% else %}
+			<span>{{ item.title }}</span>
+		{% endif %}
+	</div>
+{% endfor %}

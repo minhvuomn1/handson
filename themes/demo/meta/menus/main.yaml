@@ -1,0 +1,169 @@
+items:
+    -
+        title: 'Về chúng tôi'
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: home
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Quỹ giáo dục Hands-On'
+        nesting: null
+        type: header
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Giới thiệu'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: quy-khuyen-hoc/about
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Phương pháp tuyển sinh'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: quy-khuyen-hoc/phuong-phap-tuyen-sinh
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Chương trình học bổng'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: quy-khuyen-hoc/chuong-trinh-hoc-bong
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Đóng góp'
+                type: url
+                url: 'https://handson.edu.vn/quy-khuyen-hoc/phuong-phap-tuyen-sinh#dong-gop'
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: 'Xưởng sáng tạo Hands-On'
+        nesting: null
+        type: header
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Giới thiệu'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: xuong-sang-tao/gioi-thieu
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Phương pháp tiếp cận'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: xuong-sang-tao/phuong-phap
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Chương Trình'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: xuong-sang-tao/chuong-trinh
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Đăng ký'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: xuong-sang-tao/dang-ky
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '1'
+                    cssClass: ''
+                    isExternal: '0'
+    -
+        title: 'Kể chuyện Hands-On'
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: inspire
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Chia sẻ'
+        nesting: null
+        type: url
+        url: /
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '1'
+            cssClass: ''
+            isExternal: '0'
+name: Main

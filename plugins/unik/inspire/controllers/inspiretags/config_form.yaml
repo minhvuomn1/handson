@@ -1,0 +1,10 @@
+name: InspireTags
+form: $/unik/inspire/models/inspiretags/fields.yaml
+modelClass: Unik\Inspire\Models\InspireTags
+defaultRedirect: unik/inspire/inspiretags
+create:
+    redirect: 'unik/inspire/inspiretags/update/:id'
+    redirectClose: unik/inspire/inspiretags
+update:
+    redirect: unik/inspire/inspiretags
+    redirectClose: unik/inspire/inspiretags

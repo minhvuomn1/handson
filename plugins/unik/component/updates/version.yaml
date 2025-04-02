@@ -1,0 +1,41 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table unik_component_banner'
+    - builder_table_create_unik_component_banner.php
+1.0.3:
+    - 'Updated table unik_component_banner'
+    - builder_table_update_unik_component_banner.php
+1.0.4:
+    - 'Updated table unik_component_banner'
+    - builder_table_update_unik_component_banner_2.php
+1.0.5:
+    - 'Created table unik_component_home_content'
+    - builder_table_create_unik_component_home_content.php
+1.0.6:
+    - 'Updated table unik_component_home_content'
+    - builder_table_update_unik_component_home_content.php
+1.0.7:
+    - 'Updated table unik_component_home_content'
+    - builder_table_update_unik_component_home_content_2.php
+1.0.8:
+    - 'Updated table unik_component_home_content'
+    - builder_table_update_unik_component_home_content_3.php
+1.0.9:
+    - 'Updated table unik_component_banner'
+    - builder_table_update_unik_component_banner_3.php
+1.0.10:
+    - 'Created table unik_component_thamgia'
+    - builder_table_create_unik_component_thamgia.php
+1.0.11:
+    - 'Updated table unik_component_thamgia'
+    - builder_table_update_unik_component_thamgia.php
+1.0.12:
+    - 'Created table unik_component_'
+    - builder_table_create_unik_component_.php
+1.0.13:
+    - 'Updated table unik_component_'
+    - builder_table_update_unik_component_corevalue.php
+1.0.14:
+    - 'Created table unik_component_sosial'
+    - builder_table_create_unik_component_sosial.php

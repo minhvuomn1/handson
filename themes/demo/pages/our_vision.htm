@@ -1,0 +1,81 @@
+url = "/our_vission"
+layout = "default"
+title = "Our Vision"
+
+[HomeBanner]
+[HomeRegistration]
+==
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/our_vistion.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% component 'HomeBanner' %}
+<div class="Home-Our_Vistion-Page Page">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{'home'|page}}"><i class="fas fa-home"></i> Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Tầm nhìn</li>
+          </ol>
+        </nav>        
+    </div>
+    <div class="home-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sub-title s-center">Tầm nhìn</div>  
+                    <div class="title t-center">
+                        <div>Một nền tảng giáo dục</div>
+                    </div>
+                    <div class="content-view">
+                        Góp phần xây dựng một thế hệ trẻ Việt Nam có năng lực hòa nhập với thế giới và mang đậm bản sắc Việt Nam.
+                    </div>                                      
+                </div>
+            </div>        
+            <div class="row">
+              <div class="col-md-6">
+                <div class="our_vistion_img_item">
+                    <img src="{{ 'home/img1.jpg'|media }}"
+                                loading="lazy"
+                                alt="Về chúng tôi">
+                </div>
+              </div>   
+              <div class="col-md-6">
+                <div class="our_vistion_img_item">
+                    <img src="{{ 'home/img1.jpg'|media }}"
+                                loading="lazy"
+                                alt="Về chúng tôi">
+                </div>
+              </div> 
+              <div class="col-md-6">
+                <div class="our_vistion_img_item">
+                    <img src="{{ 'home/img1.jpg'|media }}"
+                                loading="lazy"
+                                alt="Về chúng tôi">
+                </div>
+              </div> 
+              <div class="col-md-6">
+                <div class="our_vistion_img_item">
+                    <img src="{{ 'home/img1.jpg'|media }}"
+                                loading="lazy"
+                                alt="Về chúng tôi">
+                </div>
+              </div> 
+              <div class="col-md-6">
+                <div class="our_vistion_img_item">
+                    <img src="{{ 'home/img1.jpg'|media }}"
+                                loading="lazy"
+                                alt="Về chúng tôi">
+                </div>
+              </div> 
+              <div class="col-md-6">
+                <div class="our_vistion_img_item">
+                    <img src="{{ 'home/img1.jpg'|media }}"
+                                loading="lazy"
+                                alt="Về chúng tôi">
+                </div>
+              </div>                                       
+            </div>
+        </div>
+    </div>  
+</div>
+{% component 'HomeRegistration' %}

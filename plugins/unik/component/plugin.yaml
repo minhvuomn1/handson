@@ -1,0 +1,28 @@
+plugin:
+    name: 'unik.component::lang.plugin.name'
+    description: 'unik.component::lang.plugin.description'
+    author: Unik
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    Home:
+        label: 'Trang Chủ'
+        url: /
+        icon: icon-pagelines
+        sideMenu:
+            side-menu-home-contrnt:
+                label: 'Bài Viết'
+                url: unik\component\homecontent
+                icon: icon-trello
+            side-menu-item:
+                label: 'Tham Gia'
+                url: unik\component\homethamgia
+                icon: icon-sitemap
+            side-menu-item2:
+                label: 'Giá trị chúng tôi theo đuổi'
+                url: unik\component\homecorevalue
+                icon: icon-slideshare
+            side-menu-item3:
+                label: 'Nội dung chung'
+                url: /system/settings/update/unik/component/home_settings
+                icon: icon-steam

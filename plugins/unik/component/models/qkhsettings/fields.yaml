@@ -1,0 +1,128 @@
+tabs:
+    fields:
+        title:
+            label: 'Tiêu đề'
+            span: full
+            type: text
+            tab: 'Giới Thiệu' 
+        image1:
+            label: 'Hình 1'
+            mode: image
+            span: auto
+            type: mediafinder   
+            tab: 'Giới Thiệu'     
+        image2:
+            label: 'Hình 2'
+            mode: image
+            span: auto
+            type: mediafinder   
+            tab: 'Giới Thiệu'                        
+        content:
+            label: 'Nội dung'
+            size: giant
+            span: full
+            type: richeditor   
+            tab: 'Giới Thiệu'  
+        title1:
+            label: 'Tiêu đề 2'
+            span: auto
+            type: text
+            tab: 'Giới Thiệu'  
+        images:
+            label: 'Hình ảnh'
+            type: fileupload
+            span: full
+            mode: image
+            fileTypes: ['png', 'jpg', 'jpeg']
+            mimeTypes: 'png,jpg,jpeg' 
+            tab: 'Giới Thiệu'    
+        pp_title:
+            label: 'Tiêu đề (QUY TRÌNH TRIỂN KHAI)'
+            span: auto
+            type: text
+            tab: 'Phương Pháp Tuyển Sinh'      
+        pp_title2:
+            label: 'Tiêu đề 2 (Tiêu chí tuyển chọn)'
+            span: auto
+            type: text
+            tab: 'Phương Pháp Tuyển Sinh'   
+        pp_image1:
+            label: 'Hình'
+            mode: image
+            span: auto
+            type: mediafinder   
+            tab: 'Phương Pháp Tuyển Sinh'             
+        pp_content:
+            label: 'Nội dung'
+            size: giant
+            span: full
+            type: richeditor   
+            tab: 'Phương Pháp Tuyển Sinh'    
+        pp_title3:
+            label: 'Tiêu đề 3 (Cách phối hợp với nhà trường)'
+            span: auto
+            type: text
+            tab: 'Phương Pháp Tuyển Sinh'  
+        pp_images:
+            label: 'Các bước'
+            type: fileupload
+            span: full
+            mode: image
+            fileTypes: ['png', 'jpg', 'jpeg']
+            mimeTypes: 'png,jpg,jpeg' 
+            tab: 'Phương Pháp Tuyển Sinh'   
+        pp_title4:
+            label: 'Tiêu đề 4 (Hồ sơ đăng ký)'
+            span: auto
+            type: text
+            tab: 'Phương Pháp Tuyển Sinh'
+        pp_image_hsdk:
+            label: 'Hình hồ sơ đăng ký'
+            mode: image
+            span: auto
+            type: mediafinder   
+            tab: 'Phương Pháp Tuyển Sinh'                 
+        pp_images1:
+            label: 'Danh sách hồ sơ đăng ký'
+            type: fileupload
+            span: full
+            mode: image
+            fileTypes: ['png', 'jpg', 'jpeg']
+            mimeTypes: 'png,jpg,jpeg' 
+            tab: 'Phương Pháp Tuyển Sinh'  
+        pp_title5:
+            label: 'Tiêu đề 5 (Ủng hộ chúng tôi)'
+            span: auto
+            type: text
+            tab: 'Phương Pháp Tuyển Sinh'         
+        pp_title6:
+            label: 'Tiêu đề 6 (Bạn biết không?)'
+            span: auto
+            type: text
+            tab: 'Phương Pháp Tuyển Sinh'    
+        pp_images2:
+            label: 'Danh sách quà tặng'
+            type: fileupload
+            span: full
+            mode: image
+            fileTypes: ['png', 'jpg', 'jpeg']
+            mimeTypes: 'png,jpg,jpeg' 
+            tab: 'Phương Pháp Tuyển Sinh' 
+        pp_title7:
+            label: 'Tiêu đề 7 (Hãy tay cộng tay với Hands-On ngay bây giờ nhé!)'
+            span: auto
+            type: text
+            tab: 'Phương Pháp Tuyển Sinh' 
+        pp_image:
+            label: 'Hình đóng gióp'
+            mode: image
+            span: auto
+            type: mediafinder   
+            tab: 'Phương Pháp Tuyển Sinh'    
+        pp_content_donggop:
+            label: 'Nội dung đóng gióp'
+            size: giant
+            span: full
+            type: richeditor   
+            tab: 'Phương Pháp Tuyển Sinh'                                                                                                                   
+                                                              

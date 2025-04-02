@@ -1,0 +1,10 @@
+name: NewsCategory
+form: $/unik/news/models/newscategory/fields.yaml
+modelClass: Unik\News\Models\NewsCategory
+defaultRedirect: unik/news/newscategory
+create:
+    redirect: 'unik/news/newscategory/update/:id'
+    redirectClose: unik/news/newscategory
+update:
+    redirect: unik/news/newscategory
+    redirectClose: unik/news/newscategory

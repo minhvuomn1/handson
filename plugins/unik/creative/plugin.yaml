@@ -1,0 +1,28 @@
+plugin:
+    name: 'unik.creative::lang.plugin.name'
+    description: 'unik.creative::lang.plugin.description'
+    author: Unik
+    icon: oc-icon-book
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Xưởng sáng tạo'
+        url: unik\creative\creativeitem
+        icon: icon-life-ring
+        sideMenu:
+            side-menu-item3:
+                label: 'Giới Thiệu'
+                url: system/settings/update/unik/component/sxt_gt_settings
+                icon: icon-smile-o
+            side-menu-item2:
+                label: 'Chương trình học'
+                url: unik\creative\creativeitem
+                icon: icon-edit
+            side-menu-item:
+                label: 'Đăng ký'
+                url: unik\creative\creativeregister
+                icon: icon-slideshare
+            side-menu-item4:
+                label: 'Phương Pháp'
+                url: /unik/bloc/xstphuongphap
+                icon: icon-soccer-ball-o

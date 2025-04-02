@@ -1,0 +1,31 @@
+{% set records = __SELF__.records %}
+{% set categories = __SELF__.categories %}
+{% set category_id = __SELF__.category_id %}
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/home/inspire.css'|theme }}" rel="stylesheet" />
+    <link href="{{ 'assets/css/layouts/page/inspire.css'|theme }}" rel="stylesheet" />
+{% endput %}
+<div class="home-inspire">
+    <div class="container">
+		<div class="inspire-item">
+			<div class="info-cate-view d-flex align-items-center justify-content-center">
+				{% for key, category in categories %}
+					<div class="category_name wow fadeInUp">
+						{% if category.id == category_id %}
+							<span class="cate_item active">{{category.name}}</span>
+						{% else %}
+							
+						<a class="cate_item" href="{{ 'inspire'|page }}?category={{category.id}}">{{category.name}}</a>
+						{% endif %}
+						
+					</div>
+				{% endfor %}
+				
+			</div>
+			{% partial __SELF__ ~ '::list' items=records.items%}
+		</div>   
+        {% if records.hasPages %}
+            {{ records.appends({category: category_id}).render|raw }}
+        {% endif %} 			   
+    </div>    
+</div>		

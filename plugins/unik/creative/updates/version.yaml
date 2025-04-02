@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table unik_creative_item'
+    - builder_table_create_unik_creative_item.php
+1.0.3:
+    - 'Updated table unik_creative_item'
+    - builder_table_update_unik_creative_item.php
+1.0.4:
+    - 'Created table unik_creative_register'
+    - builder_table_create_unik_creative_register.php
+1.0.5:
+    - 'Updated table unik_creative_register'
+    - builder_table_update_unik_creative_register.php

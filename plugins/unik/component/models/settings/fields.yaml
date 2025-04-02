@@ -1,0 +1,18 @@
+tabs:
+    fields:
+        title:
+            label: 'Tiêu đề'
+            span: auto
+            type: text
+            tab: 'Form đăng ký'
+        name_button:
+            label: 'Tên Button'
+            span: auto
+            type: text
+            tab: 'Form đăng ký'
+        image:
+            label: Image
+            mode: image
+            span: auto
+            type: mediafinder   
+            tab: 'Form đăng ký'             

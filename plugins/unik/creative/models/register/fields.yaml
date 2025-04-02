@@ -1,0 +1,22 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    phone:
+        label: Phone
+        span: auto
+        type: text
+    dob:
+        label: DOB
+        mode: datetime
+        span: auto
+        type: datepicker
+    email:
+        label: Email
+        span: auto
+        type: text
+    cch:
+        label: 'Chương trình học'
+        span: auto
+        type: text

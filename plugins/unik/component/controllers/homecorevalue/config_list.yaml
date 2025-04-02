@@ -1,0 +1,12 @@
+list: $/unik/component/models/homecorevalue/columns.yaml
+modelClass: Unik\Component\Models\HomeCorevalue
+title: HomeCorevalue
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'unik/component/homecorevalue/update/:id'

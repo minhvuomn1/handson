@@ -1,0 +1,25 @@
+{% set record = __SELF__.record %}
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/home/registration.css'|theme }}" rel="stylesheet" />
+{% endput %}
+<div class="home-registration">
+	<div class="image">
+	        <img
+	          src="{{ record.image|media }}"
+	          loading="lazy"
+	        />
+	</div>
+	<div class="info d-flex align-items-center justify-content-center">
+		<div class="">
+			<div class="title  wow fadeInUp">{{record.title}}</div>
+			{% if record.name_button %}
+			<div class="registration-btn-view  wow fadeInUp">
+				<a class="nav-link" data-mdb-toggle="modal" data-mdb-target="#registerModal">
+				<button class="handson-btn"><img class="icon-img" src="{{ 'assets/images/icon/Dangky.svg'|theme }}">{{record.name_button}}</button>
+				</a>
+			</div>
+			{% endif %}			
+		</div>
+		
+	</div>
+</div>

@@ -1,0 +1,10 @@
+name: XSTPhuongphap
+form: $/unik/bloc/models/xstphuongphap/fields.yaml
+modelClass: Unik\Bloc\Models\XSTPhuongphap
+defaultRedirect: unik/bloc/xstphuongphap
+create:
+    redirect: 'unik/bloc/xstphuongphap/update/:id'
+    redirectClose: unik/bloc/xstphuongphap
+update:
+    redirect: unik/bloc/xstphuongphap
+    redirectClose: unik/bloc/xstphuongphap

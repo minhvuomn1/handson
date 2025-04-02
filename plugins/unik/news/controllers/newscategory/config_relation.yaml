@@ -1,0 +1,11 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+items:
+    label: Item
+    list: $/unik/news/models/newsitem/columns.yaml
+    form: $/unik/news/models/newsitem/fields.yaml
+    readOnly: true
+    manage:
+        context: relation      

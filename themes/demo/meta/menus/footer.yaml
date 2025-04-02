@@ -1,0 +1,105 @@
+items:
+    -
+        title: 'Liên hệ chúng tôi'
+        nesting: null
+        type: header
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Địa chỉ: 101/24 Đinh Bộ Lĩnh, Phường 26, Quận Bình Thạnh, TP HCM. Vietnam.'
+                nesting: null
+                type: url
+                url: /
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: 'fas fa-map-marker-alt'
+                    isExternal: '0'
+            -
+                title: 'Số điện thoại: 0968538540'
+                nesting: null
+                type: url
+                url: /
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: 'fas fa-phone-alt'
+                    isExternal: '0'
+            -
+                title: 'Email: hocbong@handson.edu.vn'
+                nesting: null
+                type: url
+                url: /
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: 'fas fa-envelope'
+                    isExternal: '0'
+    -
+        title: 'Tìm hiểu thêm'
+        nesting: null
+        type: header
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Về chúng tôi'
+                type: url
+                url: 'https://handson.edu.vn'
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Quỹ giáo dục Hands-On'
+                type: url
+                url: 'https://handson.edu.vn/quy-khuyen-hoc/about'
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Xưởng sáng tạo Hands-On'
+                type: url
+                url: 'https://handson.edu.vn/xuong-sang-tao/gioi-thieu'
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Kể chuyện Hands-On'
+                type: url
+                url: 'https://handson.edu.vn/inspire'
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+name: Footer

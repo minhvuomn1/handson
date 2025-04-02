@@ -1,0 +1,3 @@
+<?php if ($value): ?>
+  <img src="<?= \System\Classes\MediaLibrary::url(Config::get('cms.storage.media.path'))  . e($value) ?>" height=30 />
+<?php endif ?>

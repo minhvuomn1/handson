@@ -1,0 +1,90 @@
+url = "quy-khuyen-hoc/about"
+layout = "default"
+title = "Quỹ khuyến học - Giới thiệu"
+[HomeBanner]
+==
+<?
+function onStart()
+{    
+    $this['settings'] = \Unik\Component\Models\QkhSettings::instance();    
+}
+?>
+==
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/quy-khuyen-hoc/about.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% component 'HomeBanner' %}
+<div class="About-Page Page">
+	<div class="gioi-thieu">
+		<div class="container">
+			<div class="bg">
+				<img src="{{ 'assets/images/about/bg1.jpg'|theme }}">
+			</div>			
+			<div class="row">
+				<div class="col-md-4">
+					<div class="title t-left  wow fadeInUp">{{settings.title|raw}}</div>
+					<div class="content  wow fadeInUp">
+						{{settings.content|raw}}
+					</div>
+				</div>
+				<div class="col-md-4  wow fadeInUp">
+					<div class="img-view"><img src="{{ settings.image1|media }}"  alt="" loading="lazy"/></div>
+					
+				</div>
+				<div class="col-md-4  wow fadeInUp">
+					<div class="img-view"><img src="{{ settings.image2|media }}"  alt="" loading="lazy"/></div>
+					
+				</div>				
+			</div>
+		</div>
+	</div>
+	<div class="muc-tieu">
+		<div class="title t-center  wow fadeInUp">{{settings.title1|raw}}</div>
+		{% if settings.images|length >0 %}
+			{% for key, record in settings.images %}
+				{% if key%3 == 0 %}
+					<div class="block-view">
+						<div class="bg">
+							<img src="{{ 'assets/images/about/bg3.png'|theme }}">
+						</div>				
+						<div class="img-view  wow fadeInUp"><img src="{{ record.path }}"  alt="" loading="lazy"/></div>
+						<div class="text-view d-flex align-items-center justify-content-center  wow fadeInUp">
+							<div class="text">
+								{{ record.description|raw }}
+							</div>
+						</div>
+					</div>
+				{% elseif key%3 == 1 %}
+					<div class="block-view">
+						<div class="bg1">
+							<img src="{{ 'assets/images/about/bg4.png'|theme }}">
+						</div>				
+						<div class="img-view  wow fadeInUp"><img src="{{ record.path }}"  alt="" loading="lazy"/></div>
+						<div class="text-view d-flex align-items-center justify-content-center  wow fadeInUp">
+							<div class="text">
+								{{ record.description|raw }}
+							</div>
+							
+						</div>
+						<div class="bg2">
+							<img src="{{ 'assets/images/about/bg5.jpg'|theme }}">
+						</div>				
+					</div>					
+				{% else %}
+					<div class="block-view">
+						<div class="bg3">
+							<img src="{{ 'assets/images/about/bg4.jpg'|theme }}">
+						</div>	
+						<div class="img-view  wow fadeInUp"><img src="{{ record.path }}"  alt="" loading="lazy"/></div>
+						<div class="text-view d-flex align-items-center justify-content-center  wow fadeInUp">
+							<div class="text">
+								{{ record.description|raw }}
+							</div>
+							
+						</div>	
+					</div>				
+				{% endif %}
+			{% endfor %}
+		{% endif %}				
+	</div>
+</div>

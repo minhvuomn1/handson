@@ -1,0 +1,78 @@
+{% set records = __SELF__.records %}
+{% set sort = __SELF__.sort %}
+{% set order = __SELF__.order %}
+{% set q = __SELF__.q %}
+{% set currentUrl = __SELF__.currentUrl %}
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/home/creative.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% put scripts %}
+    <script type="text/javascript" src="{{ 'assets/javascript/layouts/page/home/creative.js'|theme }}"></script>
+{% endput %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form>
+                <div class="search-form d-flex align-items-center justify-content-between">
+                    <div class="filter d-flex align-items-center">
+                        <div class="filter-title">Sắp sếp theo:</div>
+                        
+                        <div class="dropdown">
+                          <button
+                            class="btn btn-primary dropdown-toggle"
+                            type="button"
+                            id="dropdownMenuButton"
+                            data-mdb-toggle="dropdown"
+                            aria-expanded="false"
+                          >
+                              {% set  order_by= 'Tên' %}
+                              {% if order == 'created_at'%}
+                                {% if sort == 'DESC'%}
+                                    {% set  order_by= 'Mới nhất' %}
+                                {% else %}
+                                    {% set  order_by= 'Cũ nhất' %}
+                                {% endif %}
+                              {% endif %}
+                              {{order_by}}
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="{{ currentUrl }}?sort=DESC&order=name&q={{ q }}">Tên</a></li>
+                            <li><a class="dropdown-item" href="{{ currentUrl }}?sort=DESC&order=created_at&q={{ q }}">Mới nhất</a></li>
+                            <li><a class="dropdown-item" href="{{ currentUrl }}?sort=ASC&order=created_at&q={{ q }}">Cũ nhất</a></li>
+                          </ul>
+                        </div>
+                    </div>
+                    <div class="search-view">
+                        <div class="input-group">
+                          <div class="form-outline">
+                            <input type="search" id="form1" name="q" class="form-control" value="{{q}}" />
+                            <label class="form-label" for="form1">Tìm kiếm</label>
+                          </div>
+                          <button type="button" class="btn">
+                            <i class="fas fa-search"></i>
+                          </button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+            
+        </div>
+    </div>      
+</div>
+<div class="home-creative">
+    <div class="container">
+        <div class="row equal-height">
+            {% for key, record in records %}
+                <div class="col-md-4">
+                    <div class="creative-item">
+                        {% partial 'HomeCreative::item' item=record%}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        {% if records.hasPages %}
+            {{ records.appends({sort: sort,q: q,order:order}).render|raw }}
+        {% endif %}         
+    </div>    
+</div>

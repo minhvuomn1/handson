@@ -1,0 +1,4 @@
+title: NewsCategory
+modelClass: Unik\News\Models\NewsCategory
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,109 @@
+url = "xuong-sang-tao/dang-ky"
+layout = "default"
+title = "Đăng ký xưởng sáng tạo"
+
+[InspireView]
+==
+<?
+function onStart()
+{	$banner = \Unik\Bloc\Models\BlocBanner::where('url','/xuong-sang-tao/dang-ky')->first();
+	if($banner && $banner->images && $banner->images[0]) 
+	{
+		$this['banner'] = "background-image:url('". $banner->images[0]->path ."')";
+	}
+	else{
+		$this['banner'] = '';
+	}
+    $CreativeItem = \Unik\Creative\Models\CreativeItem::get();
+    $this['creative_item'] = $CreativeItem;
+}
+
+function onRegister()
+{
+    $name = input('name');
+    $phone = input('phone');
+    $dob = input('dob');
+    $email = input('email');
+    $cch = input('cch');
+    $data = post();
+    $rules = [
+        'dob' => 'required',
+        'phone' => 'required',
+        'email' => 'required|email',
+    ];
+    $validation = Validator::make($data, $rules);
+    if ($validation->fails()) {
+        throw new ValidationException($validation);
+    }
+
+    $Register = new Unik\Creative\Models\Register();
+    $Register->name = $data['name'];
+    $Register->phone = $data['phone'];
+    $date = str_replace('/', '-', $data['dob']);
+    $Register->dob = date('Y-m-d', strtotime($date));
+    $Register->email = $data['email'];
+    $Register->cch = $data['cch'];
+    $Register->save();
+
+    Flash::success('Đăng ký thành công!');
+}
+?>
+==
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/xuong-sang-tao/dang-ky.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% put scripts %}
+    <script type="text/javascript" src="{{ 'assets/javascript/layouts/page/xuong-sang-tao/dang-ky.js'|theme }}"></script>
+{% endput %}
+<div class="XST_DangKy-Page Page">
+	<div class="container-fluid">
+		<div class="banner-page " style="{{banner}}">
+	        	<div class="content-form d-flex align-items-center justify-content-center">
+	        		<div class="form-view wow fadeInUp">
+	        			<div class="header-form">
+	        				Đăng Ký
+	        			</div>
+						<form role="form" class="" data-request="onRegister" data-request-validate data-request-flash data-attach-loading data-request-success="onRegisterSuccess(data);">
+							<div class="mb-3">
+								<label for="name" class="form-label">Họ và Tên</label>
+								<input type="text" class="form-control" id="name" name="name">
+								<div class="error" data-validate-for="name"></div>
+							</div>		
+							<div class="mb-3">
+								<label for="phone" class="form-label">Số điện thoại</label>
+								<input type="text" class="form-control" id="phone" name="phone">
+								<div class="error" data-validate-for="phone"></div>
+							</div>	
+							<div class="mb-3 ">
+								<label for="dob" class="form-label">Ngày/tháng/năm sinh</label>
+								<div class="form-outline datepicker">
+									<input type="text" class="form-control" id="dobDatepicker" name="dob">
+								</div>
+								<div class="error" data-validate-for="dob"></div>
+							</div>		
+							<div class="mb-3">
+								<label for="email" class="form-label">Email</label>
+								<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+								<div class="error" data-validate-for="email"></div>
+							</div>
+							<div class="mb-3">
+								<label for="cch" class="form-label">Tham gia</label>
+								<select id="cch" class="form-select" name="cch">
+			                      {% for key, record in creative_item %}
+			                        <option {% if key == 0 %}selected{% endif %}>{{record.name|raw}}</option>
+			                      {% endfor %}  
+								</select>
+								<div class="error" data-validate-for="cch"></div>
+							</div>	
+							<div class="mb-3">
+								<button type="submit" class="btn btn btn-dangky handson-btn">Đăng ký</button>
+							</div>	
+						   <!--  <div class="alert alert-danger" data-validate-error>
+						        <p data-message></p>
+						    </div>	 -->								
+						</form>
+	        		</div>
+				</div>     	
+        </div>
+	</div>	
+</div>

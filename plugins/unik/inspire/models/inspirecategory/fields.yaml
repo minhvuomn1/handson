@@ -1,0 +1,17 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        type: number         
+tabs:
+    fields:
+        items:
+            label: Câu chuyện
+            commentAbove: Câu chuyện Inspire.
+            type: partial
+            tab: Câu chuyện
+            # path: $/unik/inspire/models/inspireitem/columns.yaml

@@ -1,0 +1,12 @@
+list: $/unik/news/models/newsitem/columns.yaml
+modelClass: Unik\News\Models\NewsItem
+title: NewsItem
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'unik/news/newsitem/update/:id'

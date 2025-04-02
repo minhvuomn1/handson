@@ -1,0 +1,11 @@
+columns:
+    image:
+        label: Image
+        #type: image
+        type: partial
+        sortable: false
+        width: 50
+        height: 50
+        options:
+            quality: 80
+        path: ~/plugins/unik/component/controllers/homesosial/_logo.htm    

@@ -1,0 +1,25 @@
+    <!-- Single item -->
+    <div class="carousel-item">
+      {% if item.url%}
+        <a href="{{item.url}}">
+      {% endif %} 
+        <div class="Slide-item">
+            <div class="banner-page" style="background-image:url('{{ item.path }}')">
+                {% if item.title %}
+                  <div class="content d-flex align-items-center justify-content-center">
+                    <div class=" wow fadeInUp">
+                      {{item.title|raw}}
+                    </div>
+                  </div>
+                {% endif %}   
+            </div>
+        </div>         
+        {% if item.description %}
+          <div class="carousel-caption d-none d-md-block">
+            {{item.description|raw}}
+          </div>
+        {% endif %} 
+      {% if item.url%}
+        </a>
+      {% endif %}       
+    </div>

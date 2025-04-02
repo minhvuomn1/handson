@@ -1,0 +1,114 @@
+url = "/"
+layout = "default"
+title = "Home"
+
+[HomeBanner]
+max = 10
+addDefault = 0
+[HomeContent]
+[HomeInspire]
+[HomeRegistration]
+==
+<?
+function onStart()
+{ 
+    $Thamgia = \Unik\Component\Models\HomeThamgia::get()->sortByDesc('sort_order');
+    $this['thamgia'] = $Thamgia;
+    $CoreValue = \Unik\Component\Models\HomeCorevalue::get()->sortByDesc('sort_order');
+    $this['corevalue'] = $CoreValue;    
+}
+?>
+==
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/home.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% put scripts %}
+    <script type="text/javascript" src="{{ 'assets/javascript/layouts/page/home.js'|theme }}"></script>
+{% endput %}
+{% component 'HomeBanner' %}
+{% component 'HomeContent' %}
+{% if corevalue|length >0 %}
+<div class="core_value_view wow fadeInUp">
+    <!-- <div class="title-s">Giá trị chúng tôi theo đuổi</div> -->
+    <div class="title t-center">Giá trị chúng tôi theo đuổi</div>
+    <div class="container bg_container">
+        <div class="bg1"><img src="{{ 'assets/images/icon/Group 555.svg'|theme }}"></div>
+        <div class="bg2"><img src="{{ 'assets/images/icon/Group 555.svg'|theme }}"></div>        
+        <div class="animate-view">
+            <div class="timeline">
+                <div class="timeline-view">
+                    {% for key, record in corevalue %}
+                    {% set img_n =(key%6) +1 %}
+                    <div class="timeline-item">
+                        <div class="bg-image">
+                            <img src="{{ "assets/images/icon/qkh#{img_n}.svg"|theme }}">
+                        </div>
+                        <div class="timeline-content">
+                            <div class="image-view">
+                                <img src="{{ record.image|media }}">
+                            </div>
+                            <div class="info-view">
+                                <div class="title-timeline">{{record.title|raw}}</div>
+                                <div class="desc">{{record.description|raw}}</div>
+                            </div>
+                        </div>
+                    </div>                    
+                    {% endfor %} 
+                </div>
+            </div>
+        </div>
+    </div>     
+</div>
+{% endif %}
+{% if thamgia|length >0 %}
+<div class="hsdk-view" id="thamgia">
+    <div class="header-bg">
+        <img class="bg2" src="{{ 'home/bg2.png'|media }}">
+        <div class="banner image-shadow" style="background-image: url({{ 'home/creative/banner.jpg'|media }});"></div>
+        <img class="bg1" src="{{ 'home/bg1.png'|media }}">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="slick" >
+            <div class="multiple-items-2">
+                {% for key, record in thamgia %}
+                <div class="s-slide-item  wow fadeInUp">
+                    <div class="title-info brl">
+                        <div class="title-item">
+                            {{record.title}}
+                        </div>
+                        <div class="description-item">
+                            {{record.description}}
+                        </div>
+                    </div>
+                    <div class="item brl brl1">
+                        <div class="item-body">
+                            <div class="image">
+                                <img src="{{ record.image|media }}"
+                                            loading="lazy"
+                                            class="d-block w-100"
+                                            alt="{{record.description}}"
+                                        >  
+                            </div>
+                            <div class="info">
+                                {{record.content | raw}}
+                            </div> 
+                        </div>
+                        {% if record.url_button %}
+                        <div class="footer">
+                            <a href="{{record.url_button}}">
+                                <button class="handson-btn"><img class="icon-img" src="{{ 'assets/images/icon/Dangky.svg'|theme }}">Tham gia</button>
+                            </a>
+                        </div>
+                        {% endif %}    
+                    </div> 
+                </div>               
+                {% endfor %}             
+            </div>  
+            </div>
+        </div>
+    </div>      
+</div>
+{% endif %}
+{% component 'HomeInspire' %}
+{% component 'HomeRegistration' %}

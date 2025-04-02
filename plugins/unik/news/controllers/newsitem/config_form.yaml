@@ -1,0 +1,10 @@
+name: NewsItem
+form: $/unik/news/models/newsitem/fields.yaml
+modelClass: Unik\News\Models\NewsItem
+defaultRedirect: unik/news/newsitem
+create:
+    redirect: 'unik/news/newsitem/update/:id'
+    redirectClose: unik/news/newsitem
+update:
+    redirect: unik/news/newsitem
+    redirectClose: unik/news/newsitem
