@@ -1,0 +1,19 @@
+{% set records = __SELF__.records %}
+{% if records|length > 0 %}
+  {% put scripts %}
+      <script type="text/javascript" src="{{ 'assets/javascript/layouts/page/home/banner.js'|theme }}"></script>
+  {% endput %}
+
+  <!-- Carousel wrapper -->
+  <div
+    class="slick"
+  >
+    <!-- Inner -->
+    <div class="single-item">
+      {% for key, record in records %}
+        {% partial __SELF__ ~ '::item' item=record%}
+      {% endfor %}
+    </div>
+  </div>
+  <!-- Carousel wrapper -->
+{% endif %} 

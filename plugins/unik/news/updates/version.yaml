@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table unik_news_category'
+    - builder_table_create_unik_news_category.php
+1.0.3:
+    - 'Created table unik_news_item'
+    - builder_table_create_unik_news_item.php
+1.0.4:
+    - 'Updated table unik_news_item'
+    - builder_table_update_unik_news_item.php
+1.0.5:
+    - 'Updated table unik_news_item'
+    - builder_table_update_unik_news_item_2.php

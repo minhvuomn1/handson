@@ -1,0 +1,31 @@
+<div class="right-item item">
+    <div class="row">
+      <div class="col-md-5">
+        <img src="{{ item.image|media }}"
+                        loading="lazy"
+                        alt="{{item.name}}"
+                    >
+      </div>        
+      <div class="col-md-7">
+        <div class="content-name">{{item.name}}</div>
+        <div class="content-title">{{item.title|raw}}</div>
+        <div class="content-description">
+            
+            {% if item.url_seemore|length >0 %}
+                {{ html_limit(item.description, (item.description|length - 43), '    <a class="seemore" href="">Xem Thêm!</a>')|raw }}
+            {% else %}
+                {{item.description|raw}}
+            {% endif %}
+            
+        </div>
+        {% if item.has_button %}
+        <div>
+            <a href="{{item.url_button}}">
+                <button class="handson-btn"><img class="icon-img" src="{{ 'assets/images/icon/Dangky.svg'|theme }}">{{item.name_button}}</button>
+            </a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+</div>
+

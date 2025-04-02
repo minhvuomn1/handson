@@ -1,0 +1,26 @@
+url = "xuong-sang-tao/chuong-trinh"
+layout = "default"
+title = "Xưởng sáng tạo - Chương Trình"
+
+[HomeBanner]
+max = 10
+addDefault = 0
+[HomeCreative]
+[CreativeItems]
+[HomeRegistration]
+==
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/xuong-sang-tao/chuong-trinh.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% component 'HomeBanner' %}
+<div class="XST_CC-Page Page">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{'xuong-sang-tao/gioi-thieu'|page}}">Xưởng Sáng Tạo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chương Trình</li>
+          </ol>
+        </nav>
+    </div>
+{% component 'CreativeItems' %}    
+</div>

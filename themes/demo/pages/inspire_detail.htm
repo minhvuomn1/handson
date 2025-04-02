@@ -1,0 +1,48 @@
+url = "/inspire/:id"
+layout = "default"
+title = "Câu chuyện Inspire"
+==
+<?
+function onStart()
+{
+	$id = $this->param('id');
+    $Item = \Unik\Inspire\Models\InspireItem::where('id',$id)->first();
+    $this['item'] = $Item;  
+}
+?>
+==
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/inspire.css'|theme }}" rel="stylesheet" />
+{% endput %}
+<div class="Inspire-Detail-Page Page">	
+	{% if item %}
+		<div class="banner" style="background-image: url('{{ item.image|media }}');">
+		</div>	
+		<div class="InspireView">
+			<div class="bg1">
+				<img src="{{ 'assets/images/about/inspire_bg1.png'|theme }}">
+			</div>
+			<div class="bg2">
+				<img src="{{ 'assets/images/about/inspire_bg2.png'|theme }}">
+			</div>
+			<div class="bg3">
+				<img src="{{ 'assets/images/about/inspire_bg3.png'|theme }}">
+			</div>	
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="content">
+							<div class="title">
+								{{item.name|raw}}
+							</div>
+							<div class="desc">
+								{{item.content|raw}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>	
+	{% endif %} 
+
+</div>

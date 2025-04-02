@@ -1,0 +1,10 @@
+name: HomeThamgia
+form: $/unik/component/models/homethamgia/fields.yaml
+modelClass: Unik\Component\Models\HomeThamgia
+defaultRedirect: unik/component/homethamgia
+create:
+    redirect: 'unik/component/homethamgia/update/:id'
+    redirectClose: unik/component/homethamgia
+update:
+    redirect: unik/component/homethamgia
+    redirectClose: unik/component/homethamgia

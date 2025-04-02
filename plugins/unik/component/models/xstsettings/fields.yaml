@@ -1,0 +1,18 @@
+tabs:
+    fields:
+        title:
+            label: 'Tiêu đề'
+            span: auto
+            type: text
+            tab: 'Giới Thiệu'
+        name_button:
+            label: 'Tên'
+            span: auto
+            type: text
+            tab: 'Giới Thiệu'   
+        content:
+            label: 'Nội dung'
+            size: giant
+            span: full
+            type: richeditor   
+            tab: 'Giới Thiệu'   

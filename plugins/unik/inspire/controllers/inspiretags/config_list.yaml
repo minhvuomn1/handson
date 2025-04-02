@@ -1,0 +1,12 @@
+list: $/unik/inspire/models/inspiretags/columns.yaml
+modelClass: Unik\Inspire\Models\InspireTags
+title: InspireTags
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'unik/inspire/inspiretags/update/:id'

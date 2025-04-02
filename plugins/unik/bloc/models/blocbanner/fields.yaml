@@ -1,0 +1,20 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    url:
+        label: 'Link đặt banner'
+        span: auto
+        type: text
+    description:
+        label: 'Mô tả ngắn'
+        span: full
+        type: text
+    images:
+        label: Banner
+        type: fileupload
+        span: full
+        mode: image
+        fileTypes: ['png', 'jpg', 'jpeg']
+        mimeTypes: 'png,jpg,jpeg'

@@ -1,0 +1,8 @@
+{% for item in items if not item.viewBag.isHidden %}
+    <div class="col-md-4">
+        <div class="title">{{ item.title }}</div>
+        {% if item.items %}
+        {% partial __SELF__ ~ "::footer/items-lv" items=item.items %}
+        {% endif %}
+    </div>
+{% endfor %}

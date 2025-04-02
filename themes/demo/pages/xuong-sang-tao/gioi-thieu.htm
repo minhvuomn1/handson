@@ -1,0 +1,62 @@
+url = "xuong-sang-tao/gioi-thieu"
+layout = "default"
+title = "Giới thiệu xưởng sáng tạo"
+
+[HomeBanner]
+[HomeCreative]
+title = ''
+description='Khóa học nổi bật'
+[HomeRegistration]
+==
+<?
+function onStart()
+{
+    $NewsItem = \Unik\Inspire\Models\InspireItem::where('is_hot',1)->get()->take(3);
+    $this['news_items'] = $NewsItem;
+    $Sosial = \Unik\Component\Models\HomeSosial::get();
+    $this['sosials'] = $Sosial;    
+    $this['settings'] = \Unik\Component\Models\XstSettings::instance();    
+}
+?>
+==
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/xuong-sang-tao/gioi-thieu.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% component 'HomeBanner' %}
+<div class="XST_About-Page Page">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Xưởng Sáng Tạo</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Giới thiệu</li>
+          </ol>
+        </nav>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="sub-title s-left wow fadeInUp">{{settings.title|raw}}</div>
+                <div class="title t-left wow fadeInUp">
+                    <div><strong>{{settings.name|raw}}</strong></div>
+                </div>
+                <div class="content wow fadeInUp">
+                    {{settings.content|raw}}
+                </div>                
+            </div>
+            <div class="col-md-5">
+                <div class="sosial d-flex align-items-center">
+                    <div class="sosial-title d-flex align-items-center">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Chia sẻ</span>
+                    </div>
+                    <div class="sosial-items wow fadeInUp">
+                        {% for key, record in sosials %}
+                            <a href="{{record.url}}"> <img src="{{ record.image|media }}" /> </a>
+                        {% endfor %}
+                    </div>
+                </div>                
+                {% partial "explain/hot-news.htm" items=news_items%}
+            </div>
+        </div>
+    </div>
+</div>
+{% component 'HomeCreative' %}
+{% component 'HomeRegistration' %}

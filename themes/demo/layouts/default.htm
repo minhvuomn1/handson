@@ -1,0 +1,99 @@
+description = "Default layout"
+[staticPage]
+==
+<?
+function onRegisterModal()
+{
+    $name = input('name');
+    $phone = input('phone');
+    $dob = input('dob');
+    $email = input('email');
+    $cch = input('cch');
+    $data = post();
+    $rules = [
+        'dob' => 'required',
+        'phone' => 'required',
+        'email' => 'required|email',
+    ];
+    $validation = Validator::make($data, $rules);
+    if ($validation->fails()) {
+        throw new ValidationException($validation);
+    }
+
+    $Register = new Unik\Creative\Models\Register();
+    $Register->name = $data['name'];
+    $Register->phone = $data['phone'];
+    $date = str_replace('/', '-', $data['dob']);
+    $Register->dob = date('Y-m-d', strtotime($date));
+    $Register->email = $data['email'];
+    $Register->cch = $data['cch'];
+    $Register->save();
+
+    Flash::success('Đăng ký thành công!');
+}
+?>
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hands-On - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="OctoberCMS">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/logo.png'|theme }}">
+        <!-- <link href="{{ 'assets/css/bootstrap/bootstrap.min.css'|theme }}" rel="stylesheet"> -->
+        <!-- <link href="{{ 'assets/library/mdb-ui-kit/mdb.rtl.min.css'|theme }}" rel="stylesheet"> -->
+        <link href="{{ 'assets/library/mdb-ui-kit-pro/css/mdb.min.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/library/fontawesome-pro/css/all.min.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/library/slick/slick.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/library/slick/slick-theme.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/library/animate.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+        {% styles %}
+    </head>
+    <body class="{{ 'page-'~this.page.id }}">
+
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+
+        <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'site/footer' %}
+        </footer>
+        {% partial 'site/register-modal' %}
+        <!-- Scripts -->
+
+        <script src="{{ [
+            'assets/library/jquery-3.6.0.min.js',
+            'assets/library/mdb-ui-kit/mdb.min.js',
+            'assets/library/mdb-ui-kit-pro/js/mdb.min.js',
+            'assets/library/slick/slick.min.js',
+            'assets/library/wow/wow.min.js',
+            'assets/javascript/app.js',
+        ]|theme }}"></script>
+
+        {% framework extras %}
+        {% scripts %}
+    </body>
+</html>
+<script>
+    wow = new WOW(
+    {
+        boxClass:     'wow',      // default
+        animateClass: 'animated', // default
+        offset:       0,          // default
+        mobile:       true,       // default
+        live:         true        // default
+    })
+    wow.init();    
+</script>

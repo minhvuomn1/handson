@@ -1,0 +1,4 @@
+title: InspireCategory
+modelClass: Unik\Inspire\Models\InspireCategory
+toolbar:
+    buttons: reorder_toolbar

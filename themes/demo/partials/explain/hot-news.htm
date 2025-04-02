@@ -1,0 +1,27 @@
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/partials/explain/hot-news.css'|theme }}" rel="stylesheet" />
+{% endput %}
+<div class="hot-news wow fadeInUp">
+    <div class="title t-left">
+        <div>Tin tức nổi bật</div>
+    </div>	
+    {% for key, itemr in items %}
+    <a href="{{'inspire_detail'|page({id:itemr.id})}}">
+        <div class="news-item">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="news-image">
+                        <img src="{{ itemr.image|media }}"> 
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="news-title">{{itemr.name |raw}}</div>
+                    <div class="news-desc">
+                        {{itemr.description|raw}}
+                    </div>
+                </div>   
+            </div>
+        </div>  
+    </a>  
+    {% endfor %}      
+</div>

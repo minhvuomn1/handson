@@ -1,0 +1,11 @@
+columns:
+    name: 
+        label: Name      
+    phone: 
+        label: Phone 
+    dob: 
+        label: DOB 
+    email: 
+        label: Email 
+    cch: 
+        label: Chương Trình Học                         

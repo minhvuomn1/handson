@@ -1,0 +1,10 @@
+name: CreativeItem
+form: $/unik/creative/models/creativeitem/fields.yaml
+modelClass: Unik\Creative\Models\CreativeItem
+defaultRedirect: unik/creative/creativeitem
+create:
+    redirect: 'unik/creative/creativeitem/update/:id'
+    redirectClose: unik/creative/creativeitem
+update:
+    redirect: unik/creative/creativeitem
+    redirectClose: unik/creative/creativeitem

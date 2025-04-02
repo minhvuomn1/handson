@@ -1,0 +1,92 @@
+url = "/out_mission"
+layout = "default"
+title = "Our Mission"
+
+[HomeBanner]
+[HomeRegistration]
+==
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/out_misstion.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% component 'HomeBanner' %}
+<div class="Home-Out_Misstion-Page Page">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{'home'|page}}"><i class="fas fa-home"></i> Trang chủ </a></li>
+            <li class="breadcrumb-item active" aria-current="page">Sứ mệnh</li>
+          </ol>
+        </nav>        
+    </div>    
+    <div class="home-container">
+        <div class="container">
+          <div class="Home-Content">
+            <div class="left-item item">
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="content-name">Sứ mệnh</div>
+                    <div class="content-title">Phương pháp giáo dục cấp tiến</div>
+                    <div class="content-description">
+                        Mở ra những không gian đa chiều để kết nối mọi nguồn lực của xã hội hỗ trợ cho thế hệ trẻ <span>Việt Nam</span> thông qua:
+                        <div class="desc-item">
+                            <div class="icon-view">
+                                <img src="{{ 'assets/images/icon/Group_525.svg'|theme }}"
+                                    loading="lazy"
+                                    alt="Out Misstion"
+                                >
+                            </div>
+                            <div class="desc-item-content">
+                                Hỗ trợ toàn diện (tài chính, kiến thức, kỹ năng) cho những học sinh phổ thông gặp hoàn cảnh khó khăn ở vùng đồng bằng sông Cửu Long.
+                            </div>
+                        </div>
+                        <div class="desc-item">
+                            <div class="icon-view">
+                                <img src="{{ 'assets/images/icon/Group_526.svg'|theme }}"
+                                    loading="lazy"
+                                    alt="Out Misstion"
+                                >
+                            </div>
+                            <div class="desc-item-content">
+                                Vận hành không gian trải nghiệm kết nối gia đình cho các gia đình thành thị để ứng dụng và sáng tạo với chất liệu văn hóa Việt Nam.
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="">
+                            <button class="handson-btn"><img class="icon-img" src="{{ 'assets/images/icon/Dangky.svg'|theme }}">Đăng Ký</button>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <img src="{{ 'assets/images/Group_802.png'|theme }}"
+                                    loading="lazy"
+                                    alt="Out Misstion"
+                                >
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>  
+    <div class="qoute-view">
+        <div class="bg1">
+            <img src="{{ 'assets/images/Path_556.svg'|theme }}">
+        </div>   
+        <div class="bg2">
+            <img src="{{ 'assets/images/Path_555.svg'|theme }}">
+        </div>         
+        <div class="container">
+            <div class="qoute-bg"> 
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="qoute-content">
+                            Với mỗi học sinh tham gia Xưởng sáng tạo sẽ giúp đỡ một em<br>
+                            học sinh khó khăn ở ĐBSCL có điều kiện học tập tốt hơn.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% component 'HomeRegistration' %}

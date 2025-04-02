@@ -1,0 +1,32 @@
+[staticMenu]
+code = "footer"
+==
+<?
+function onStart()
+{
+    $Sosial = \Unik\Component\Models\HomeSosial::get();
+    $this['sosials'] = $Sosial;
+}
+?>
+==
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            {% component 'staticMenu' %}            
+            <div class="col-md-4">
+                <div class="footer-logo">
+                    <img
+                                              src="{{ 'assets/images/logo.png'|theme }}"
+                                              alt=""
+                                              loading="lazy"
+                                            />          
+                </div>
+            </div>
+            <div class="item sosial">
+                {% for key, record in sosials %}
+                    <a href="{{record.url}}"> <img src="{{ record.image|media }}" /> </a>
+                {% endfor %}
+            </div>            
+        </div>
+    </div>
+</div>

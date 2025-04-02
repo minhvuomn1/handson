@@ -1,0 +1,4 @@
+title: XSTPhuongphap
+modelClass: Unik\Bloc\Models\XSTPhuongphap
+toolbar:
+    buttons: reorder_toolbar

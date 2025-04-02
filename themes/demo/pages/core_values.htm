@@ -1,0 +1,88 @@
+url = "/core_values"
+layout = "default"
+title = "Core Values"
+
+[HomeBanner]
+[HomeRegistration]
+==
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/core_values.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% component 'HomeBanner' %}
+<div class="Home-Core_Values-Page Page">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{'home'|page}}"><i class="fas fa-home"></i> Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Giá trị chúng tôi theo đuổi</li>
+          </ol>
+        </nav>        
+    </div> 
+    <div class="title t-center">Giá trị chúng tôi theo đuổi</div>
+    <div class="container-fluid">
+        <div class="animate-view">
+            <div class="timeline">
+                <div class="image-timeline"><img src="{{ 'assets/images/Group_803.svg'|theme }}"></div>
+                <div class="timeline-view">
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <div class="image-view">
+                                <img src="{{ 'assets/images/timeline/Group_459.svg'|theme }}">
+                            </div>
+                            <div class="info-view">
+                                <div class="title-timeline">Tự hào</div>
+                                <div class="desc">về các tài sản cốt lõi tạo nên văn hóa Việt Nam</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-content">
+                            <div class="image-view">
+                                <img src="{{ 'assets/images/timeline/Group_493.svg'|theme }}">
+                            </div>
+                            <div class="info-view">
+                                <div class="title-timeline">Tự chủ</div>
+                                <div class="desc">trong hành trình học hỏi và phát triển cá nhân</div>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <div class="image-view">
+                                <img src="{{ 'assets/images/timeline/Group_489.svg'|theme }}">
+                            </div>
+                            <div class="info-view">
+                                <div class="title-timeline">Sáng tạo</div>
+                                <div class="desc">Trong mọi lĩnh vực tiếp cận</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-right">
+                        <div class="timeline-content">
+                            <div class="image-view">
+                                <img src="{{ 'assets/images/timeline/Group_497.svg'|theme }}">
+                            </div>
+                            <div class="info-view">
+                                <div class="title-timeline">Kết nối</div>
+                                <div class="desc">cùng mọi nguồn lực của xã hội</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-content">
+                            <div class="image-view">
+                                <img src="{{ 'assets/images/timeline/Group_491.svg'|theme }}">
+                            </div>
+                            <div class="info-view">
+                                <div class="title-timeline">Chia sẻ</div>
+                                <div class="desc">tinh thần tương trợ và giúp đỡ nhau cùng tiến</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>   
+</div>
+{% component 'HomeRegistration' %}

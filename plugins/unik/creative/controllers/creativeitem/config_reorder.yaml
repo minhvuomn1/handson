@@ -1,0 +1,4 @@
+title: CreativeItem
+modelClass: Unik\Creative\Models\CreativeItem
+toolbar:
+    buttons: reorder_toolbar

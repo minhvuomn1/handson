@@ -1,0 +1,5 @@
+title: HomeContent
+modelClass: Unik\Component\Models\HomeContent
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

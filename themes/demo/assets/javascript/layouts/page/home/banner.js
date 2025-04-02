@@ -1,0 +1,1 @@
+"use strict";$(".single-item").slick({dots:!0,infinite:!0,speed:500,autoplaySpeed:1e4,autoplay:!0,fade:!0,cssEase:"linear"});

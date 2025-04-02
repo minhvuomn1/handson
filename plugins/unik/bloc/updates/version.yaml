@@ -1,0 +1,11 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table unik_bloc_banner'
+    - builder_table_create_unik_bloc_banner.php
+1.0.3:
+    - 'Created table unik_bloc_xst_phuong_phap'
+    - builder_table_create_unik_bloc_xst_phuong_phap.php
+1.0.4:
+    - 'Updated table unik_bloc_xst_phuong_phap'
+    - builder_table_update_unik_bloc_xst_phuong_phap.php

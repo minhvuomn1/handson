@@ -1,0 +1,10 @@
+fields:
+    url:
+        label: Link
+        span: auto
+        type: text
+    image:
+        label: Image
+        mode: image
+        span: auto
+        type: mediafinder

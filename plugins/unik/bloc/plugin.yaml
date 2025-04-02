@@ -1,0 +1,33 @@
+plugin:
+    name: 'unik.bloc::lang.plugin.name'
+    description: 'unik.bloc::lang.plugin.description'
+    author: Unik
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Quản lý chung'
+        url: /
+        icon: icon-life-ring
+        sideMenu:
+            side-menu-item:
+                label: Banner
+                url: /unik/bloc/blocbanner
+                icon: icon-image
+            side-menu-item2:
+                label: Sosial
+                url: unik\component\homesosial
+                icon: icon-sitemap
+    main-menu-item2:
+        label: 'Quỹ khuyến học'
+        url: /
+        icon: icon-asterisk
+        sideMenu:
+            side-menu-item:
+                label: 'Giới Thiệu'
+                url: system/settings/update/unik/component/qkh_gt_settings
+                icon: icon-sitemap
+            side-menu-item2:
+                label: 'Phương pháp tuyển sinh'
+                url: system/settings/update/unik/component/qkh_gt_settings
+                icon: icon-skyatlas

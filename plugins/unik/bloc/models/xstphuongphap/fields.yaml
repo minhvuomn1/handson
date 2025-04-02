@@ -1,0 +1,15 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    image:
+        label: Imahe
+        mode: image
+        span: auto
+        type: mediafinder
+    content:
+        label: 'Nội Dung'
+        size: giant
+        span: full
+        type: richeditor

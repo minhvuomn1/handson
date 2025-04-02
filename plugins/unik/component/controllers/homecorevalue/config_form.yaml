@@ -1,0 +1,10 @@
+name: HomeCorevalue
+form: $/unik/component/models/homecorevalue/fields.yaml
+modelClass: Unik\Component\Models\HomeCorevalue
+defaultRedirect: unik/component/homecorevalue
+create:
+    redirect: 'unik/component/homecorevalue/update/:id'
+    redirectClose: unik/component/homecorevalue
+update:
+    redirect: unik/component/homecorevalue
+    redirectClose: unik/component/homecorevalue

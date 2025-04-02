@@ -1,0 +1,32 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table unik_inspire_category'
+    - builder_table_create_unik_inspire_category.php
+1.0.3:
+    - 'Created table unik_inspire_item'
+    - builder_table_create_unik_inspire_item.php
+1.0.4:
+    - 'Updated table unik_inspire_item'
+    - builder_table_update_unik_inspire_item.php
+1.0.5:
+    - 'Updated table unik_inspire_item'
+    - builder_table_update_unik_inspire_item_2.php
+1.0.6:
+    - 'Updated table unik_inspire_item'
+    - builder_table_update_unik_inspire_item_3.php
+1.0.7:
+    - 'Created table unik_inspire_tags'
+    - builder_table_create_unik_inspire_tags.php
+1.0.8:
+    - 'Created table unik_inspire_item_tags'
+    - builder_table_create_unik_inspire_item_tags.php
+1.0.9:
+    - 'Updated table unik_inspire_item_tags'
+    - builder_table_update_unik_inspire_item_tags.php
+1.0.10:
+    - 'Updated table unik_inspire_item_tags'
+    - builder_table_update_unik_inspire_item_tags_2.php
+1.0.11:
+    - 'Updated table unik_inspire_item'
+    - builder_table_update_unik_inspire_item_4.php

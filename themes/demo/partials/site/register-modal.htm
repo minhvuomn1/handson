@@ -1,0 +1,73 @@
+==
+<?
+function onStart()
+{
+    $CreativeItem = \Unik\Creative\Models\CreativeItem::get();
+    $this['creative_item'] = $CreativeItem;
+}
+?>
+==
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="registerModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Đăng Ký</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-mdb-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+            <div class="content-form d-flex align-items-center justify-content-center">
+              <div class="form-view">
+                <form id="onRegisterModalForm" role="form" class="" data-request="onRegisterModal" data-request-validate data-request-flash data-attach-loading data-request-success="$('#onRegisterModalForm')[0].reset();">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Họ và Tên</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                    <div class="error" data-validate-for="name"></div>
+                  </div>    
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Số điện thoại</label>
+                    <input type="text" class="form-control" id="phone" name="phone">
+                    <div class="error" data-validate-for="phone"></div>
+                  </div>  
+                  <div class="mb-3 ">
+                    <label for="dob" class="form-label">Ngày/tháng/năm sinh</label>
+                    <div class="form-outline datepicker">
+                      <input type="text" class="form-control" id="dobDatepicker" name="dob">
+                    </div>
+                    <div class="error" data-validate-for="dob"></div>
+                  </div>    
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                    <div class="error" data-validate-for="email"></div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="cch" class="form-label">Tham gia</label>
+                    <select id="cch" class="form-select" name="cch">
+                      {% for key, record in creative_item %}
+                        <option data-id='{{record.id}}' {% if key == 0 %}selected{% endif %}>{{record.name|raw}}</option>
+                      {% endfor %}              
+                    </select>
+                    <div class="error" data-validate-for="cch"></div>
+                  </div>  
+                  <div class="mb-3">
+                    <button type="submit" class="btn btn btn-dangky handson-btn">Đăng ký</button>
+                  </div>              
+                </form>
+              </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>

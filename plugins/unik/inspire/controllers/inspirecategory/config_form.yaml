@@ -1,0 +1,10 @@
+name: InspireCategory
+form: $/unik/inspire/models/inspirecategory/fields.yaml
+modelClass: Unik\Inspire\Models\InspireCategory
+defaultRedirect: unik/inspire/inspirecategory
+create:
+    redirect: 'unik/inspire/inspirecategory/update/:id'
+    redirectClose: unik/inspire/inspirecategory
+update:
+    redirect: unik/inspire/inspirecategory
+    redirectClose: unik/inspire/inspirecategory

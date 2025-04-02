@@ -1,0 +1,20 @@
+plugin:
+    name: 'unik.inspire::lang.plugin.name'
+    description: 'unik.inspire::lang.plugin.description'
+    author: Unik
+    icon: oc-icon-align-justify
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Kể chuyện Hands-ON'
+        url: /
+        icon: icon-align-justify
+        sideMenu:
+            side-menu-item:
+                label: 'Danh Mục'
+                url: unik\inspire\inspirecategory
+                icon: icon-square-o
+            side-menu-item2:
+                label: 'Câu chuyện'
+                url: unik\inspire\inspireitem
+                icon: icon-outdent

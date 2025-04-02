@@ -1,0 +1,10 @@
+name: BlocBanner
+form: $/unik/bloc/models/blocbanner/fields.yaml
+modelClass: Unik\Bloc\Models\BlocBanner
+defaultRedirect: unik/bloc/blocbanner
+create:
+    redirect: 'unik/bloc/blocbanner/update/:id'
+    redirectClose: unik/bloc/blocbanner
+update:
+    redirect: unik/bloc/blocbanner
+    redirectClose: unik/bloc/blocbanner

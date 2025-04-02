@@ -1,0 +1,19 @@
+fields:
+    from:
+        label: From (Created Date)
+        span: auto
+        type: datepicker
+        mode: date
+        ignoreTimezone: true
+    to:
+        label: To (Created Date)
+        span: auto
+        type: datepicker
+        mode: date
+        ignoreTimezone: true 
+    category:
+        label: Chương Trình Học
+        span: auto
+        type: dropdown
+        options: listCategory
+        emptyOption: ''

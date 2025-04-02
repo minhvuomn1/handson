@@ -1,0 +1,18 @@
+{% set records = __SELF__.records %}
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/home/inspire.css'|theme }}" rel="stylesheet" />
+    <link href="{{ 'assets/css/layouts/page/inspire.css'|theme }}" rel="stylesheet" />
+{% endput %}
+<div class="home-inspire">
+    <div class="container">
+		<div class="inspire-item">
+			<div class="info-view">
+				<div class="description">Kể chuyện Hands-On</div>
+			</div>
+			{% partial __SELF__ ~ '::list' items=records.items%}
+		</div>   
+		{% if records.hasPages %}
+		    {{ records | raw }}
+		{% endif %}		   
+    </div>    
+</div>		

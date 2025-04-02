@@ -1,0 +1,4 @@
+title: HomeThamgia
+modelClass: Unik\Component\Models\HomeThamgia
+toolbar:
+    buttons: reorder_toolbar

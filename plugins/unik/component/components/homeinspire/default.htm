@@ -1,0 +1,29 @@
+{% set records = __SELF__.records %}
+{% set orderRecords = __SELF__.orderRecords %}
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/home/inspire.css'|theme }}" rel="stylesheet" />
+{% endput %}
+<div class="home-inspire">
+    <div class="container">
+		<div class="title wow fadeInUp">Câu chuyện truyền cảm hứng</div>
+		<div class="inspire-item">
+			<div class="info-view">
+				<div class="description wow fadeInUp">Kể chuyện Hands-On</div>
+			</div>
+			{% partial __SELF__ ~ '::list' items=records%}
+		</div> 
+    </div>     
+</div>
+{% for key, item in orderRecords %}
+	<div class="home-inspire">
+	    <div class="container">
+			<!-- <div class="title wow fadeInUp">{{item.name}}</div> -->
+			<div class="inspire-item">
+				<div class="info-view">
+					<div class="description wow fadeInUp">{{item.name}}</div>
+				</div>
+				{% partial __SELF__ ~ '::list' items=item.items%}
+			</div> 
+	    </div>     
+	</div>	
+{% endfor %}   

@@ -1,0 +1,10 @@
+name: CreativeRegister
+form: $/unik/creative/models/register/fields.yaml
+modelClass: Unik\Creative\Models\Register
+defaultRedirect: unik/creative/creativeregister
+create:
+    redirect: 'unik/creative/creativeregister/update/:id'
+    redirectClose: unik/creative/creativeregister
+update:
+    redirect: unik/creative/creativeregister
+    redirectClose: unik/creative/creativeregister

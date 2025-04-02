@@ -1,0 +1,10 @@
+name: HomeBanner
+form: $/unik/component/models/banner/fields.yaml
+modelClass: Unik\Component\Models\Banner
+defaultRedirect: unik/component/homebanner
+create:
+    redirect: 'unik/component/homebanner/update/:id'
+    redirectClose: unik/component/homebanner
+update:
+    redirect: unik/component/homebanner
+    redirectClose: unik/component/homebanner

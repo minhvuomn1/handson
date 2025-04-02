@@ -1,0 +1,38 @@
+fields:
+    name:
+        label: Name
+        span: auto
+        type: text
+    image:
+        label: Image
+        mode: image
+        span: full
+        type: mediafinder
+    is_visible:
+        label: Visible
+        span: auto
+        type: switch
+    is_hot:
+        label: 'Tin xưởng sang tạo'
+        span: auto
+        type: switch
+    category:
+        label: Category
+        nameFrom: name
+        descriptionFrom: description
+        span: auto
+        type: relation
+    sort_order:
+        label: 'Sort Order'
+        span: auto
+        type: number
+    description:
+        label: Description
+        size: large
+        span: full
+        type: richeditor
+    content:
+        label: Content
+        size: giant
+        span: full
+        type: richeditor

@@ -1,0 +1,10 @@
+<div class="list-item-inspire">
+	<div class="row equal-height">
+		{% for key, itemr in items %}
+			{% partial __SELF__ ~ '::item' item=itemr%}
+		{% endfor %}
+	</div>
+	<div class="seemore-view">
+		<a class="seemore" href="{{'inspire'|page}}">Xem Thêm</a>
+	</div>
+</div>

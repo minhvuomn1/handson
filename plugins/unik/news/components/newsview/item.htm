@@ -1,0 +1,21 @@
+<div class="col-md-4">
+	<a href="">
+		<div class="item">
+			<div class="image">
+				<img src="{{ item.image|media }}"
+		                    loading="lazy"
+		                    class="d-block w-100"
+		                    alt="{{item.name}}"
+		                >  
+			</div>
+			<div class="info">
+				<div class="name">
+					{{item.name}}
+				</div>
+				<div class="description">
+					{{ html_limit(item.description, 200, '...')|raw }}
+				</div>	
+			</div>
+		</div>
+	</a>
+</div>

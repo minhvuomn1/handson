@@ -1,0 +1,11 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+tags:
+    label: Tags
+    list: $/unik/inspire/models/inspiretags/columns.yaml
+    form: $/unik/inspire/models/inspiretags/fields.yaml
+    readOnly: true
+    manage:
+        context: relation

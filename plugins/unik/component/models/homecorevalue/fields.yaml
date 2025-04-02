@@ -1,0 +1,14 @@
+fields:
+    title:
+        label: 'Tiêu để'
+        span: auto
+        type: text
+    description:
+        label: 'Mô tả ngắn'
+        span: auto
+        type: text
+    image:
+        label: 'Hình ảnh'
+        mode: image
+        span: auto
+        type: mediafinder

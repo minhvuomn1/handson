@@ -1,0 +1,4 @@
+title: HomeBanner
+modelClass: Unik\Component\Models\Banner
+toolbar:
+    buttons: reorder_toolbar

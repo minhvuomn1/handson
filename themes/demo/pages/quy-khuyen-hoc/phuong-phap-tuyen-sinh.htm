@@ -1,0 +1,166 @@
+url = "quy-khuyen-hoc/phuong-phap-tuyen-sinh"
+layout = "default"
+title = "Phương pháp tuyển sinh"
+[HomeBanner]
+==
+<?
+function onStart()
+{    
+    $this['settings'] = \Unik\Component\Models\QkhSettings::instance();    
+}
+?>
+==
+{% put styles %}
+    <link href="{{ 'assets/css/layouts/page/quy-khuyen-hoc/ppts.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% put scripts %}
+    <script type="text/javascript" src="{{ 'assets/javascript/layouts/page/quy-khuyen-hoc/ppts.js'|theme }}"></script>
+{% endput %}
+{% component 'HomeBanner' %}
+<div class="Ppts-Page Page">
+	<div class="tctc-view">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 hide-mobile">
+					<div class="bg">
+						<img src="{{ 'assets/images/about/bg6.png'|theme }}">
+					</div>					
+					<div class="img-view"><img src="{{ 'assets/images/IMG_7722.jpg'|theme }}"  alt="" loading="lazy"/></div>
+				</div>
+				<div class="col-md-6">
+					<div class="sub-title s-right  wow fadeInUp">{{settings.pp_title|raw}}</div>
+					<div class="title t-right  wow fadeInUp">
+						<div>{{settings.pp_title2|raw}}</div>
+					</div>
+					<div class="content-view  wow fadeInUp">
+						{{settings.pp_content|raw}}
+					</div>
+				</div>
+				<div class="col-md-6 hide-pc">
+					<div class="bg">
+						<img src="{{ 'assets/images/about/bg6.png'|theme }}">
+					</div>						
+					<div class="img-view"  wow fadeInUp><img src="{{ settings.pp_image1|media }}"  alt="" loading="lazy"/></div>
+				</div>				
+			</div>
+		</div>
+	</div>
+	<div class="cphvnt-view">
+		<div class="container">
+			<div class="row">
+				<div class="title t-left  wow fadeInUp">
+					<div>{{settings.pp_title3|raw}}</div>
+				</div>				
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					{% if settings.pp_images|length >0 %}
+						{% for key, record in settings.pp_images %}
+							<div class="content-item">
+								<div class="content-image wow fadeInUp">
+									<img src="{{ record.path }}"  alt="" loading="lazy"/>
+								</div>
+								<div class="content-info">
+									<div class="content-item-title t{{key%5+1}} wow fadeInUp">
+										{{ record.title|raw }}
+									</div>
+									<div class="content-item-desc wow fadeInUp">
+										{{ record.description|raw }}
+									</div>							
+								</div>
+							</div>						
+						{% endfor %}
+					{% endif %}		
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="hsdk-view">
+	    <div class="header-bg">
+	        <img class="bg2" src="{{ 'home/bg2.png'|media }}">
+	        <div class="banner image-shadow" style="background-image: url('{{ settings.pp_image_hsdk|media }}');"></div>
+	        <img class="bg1" src="{{ 'home/bg1.png'|media }}">
+	    </div>
+	    <div class="container">
+	      <div class="info-view">
+	      	<div class="description wow fadeInUp">{{ settings.pp_title4|raw }}</div>
+	      </div>
+	      <div class="slick" >
+	        <div class="multiple-items-2">
+				{% if settings.pp_images1|length >0 %}
+					{% for key, record in settings.pp_images1 %}	 
+						<div class="s-slide-item">
+							<div class="item">
+								<div class="image">
+									<img src="{{ record.path }}"
+						                        loading="lazy"
+						                        class="d-block w-100"
+						                        alt="{{ record.title|raw }}"
+						                    >  
+								</div>
+								<div class="info">
+									<div class="name wow fadeInUp">
+										{{ record.title|raw }}
+									</div>
+									<div class="content-view wow fadeInUp">
+										{{ record.description|raw }}
+									</div>	
+			
+								</div>		
+							</div>
+						</div>					 
+					{% endfor %}
+				{% endif %}					
+	        </div>	
+	      </div>
+	    </div>	    
+	</div>
+	<div class="uhct-view">
+		<div class="container">
+			<div class="row">
+				<div class="title t-left wow fadeInUp">
+					<div>{{ settings.pp_title5|raw }}</div>
+				</div>				
+			</div>
+			<div class="sub-title s-center wow fadeInUp">{{ settings.pp_title6|raw }}</div>
+			<div class="row-content">
+				<div class="row">
+					{% if settings.pp_images2|length >0 %}
+						{% for key, record in settings.pp_images2 %}	
+							{% if key%3 == 0 %}
+								{% set style = 'o-style' %}
+							{% elseif key%3 == 1 %}
+								{% set style = 'y-style' %}
+							{% else %}
+								{% set style = 'g-style' %}
+							{% endif %}
+							<div class="col-md-4 wow fadeInUp">
+								<div class="row-item {{style}}">
+									<div class="row-title">{{ record.title|raw }}</div>
+									<div class="row-desc">
+										{{ record.description|raw }}
+									</div>
+								</div>
+							</div>							
+						{% endfor %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tct-view" id="dong-gop">
+		<div class="container">
+			<div class="sub-title s-center wow fadeInUp"><div>{{ settings.pp_title7|raw }}</div></div>
+		</div>
+		<div class="info-view image-shadow" style="background-image:url('{{ settings.pp_image|media }}')">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="info wow fadeInUp">
+						{{ settings.pp_content_donggop|raw }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
