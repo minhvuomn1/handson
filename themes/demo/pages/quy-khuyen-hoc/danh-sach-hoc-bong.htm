@@ -1,0 +1,107 @@
+url = "quy-khuyen-hoc/dang-sach-hoc-bong" 
+layout = "default" 
+title = "Quỹ khuyến học - Danh sách học bổng" 
+[HomeBanner] 
+==  
+{% put styles %}
+	<link href="{{ 'assets/css/layouts/page/quy-khuyen-hoc/dshb.css'|theme }}" rel="stylesheet" />
+{% endput %}
+{% component 'HomeBanner' %}
+<div class="dshb-page">
+	<div class="dshb-view">
+		<div class="dshb-container">
+			<div class="banner-page">
+				<div class="title-dshb">Danh sách học bổng</div>
+			</div>
+			<div class="filter-container">
+				<div class="auto-added-frame">
+				  <svg class="action-icons-f-filter" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="40" height="40" rx="20" fill="#999999" />
+					<path d="M30.2462 9.84619H9.75385C9.10769 9.84619 8.73846 10.6308 9.15385 11.1385L18.1538 21.6154C18.4308 21.9385 18.6154 22.4 18.6154 22.8154V29.4616C18.6154 29.8308 18.9385 30.1539 19.3077 30.1539H20.6923C21.0615 30.1539 21.3846 29.8308 21.3846 29.4616V22.8154C21.3846 22.3539 21.5231 21.9385 21.8462 21.6154L30.8462 11.1385C31.2615 10.6308 30.9385 9.84619 30.2462 9.84619Z" fill="white"/>
+				  </svg>
+				</div>
+			  
+				<div class="label-filter">
+				  <div class="link-text">Lọc theo</div>
+				</div>
+			  
+				<!-- Dropdown: Nhà tài trợ học bổng -->
+				<div class="input-search">
+				  <div class="input-field">
+					<div class="label-dropdown">Nhà tài trợ học bổng</div>
+					<select class="custom-dropdown">
+					  <option value="">Chọn nhà tài trợ</option>
+					  <option value="hands-on">Hands On</option>
+					  <option value="viettel">Viettel</option>
+					  <option value="vinschool">Vinschool</option>
+					  <option value="other">Khác</option>
+					</select>
+				  </div>
+				</div>
+			  
+				<!-- Dropdown: Trường -->
+				<div class="input-search">
+				  <div class="input-field">
+					<div class="label-dropdown">Trường</div>
+					<select class="custom-dropdown">
+					  <option value="">Chọn trường</option>
+					  <option value="ftu">ĐH Ngoại thương CSII</option>
+					  <option value="bk">ĐH Bách Khoa</option>
+					  <option value="fpt">ĐH FPT</option>
+					  <option value="hust">ĐH Kinh tế Quốc dân</option>
+					</select>
+				  </div>
+				</div>
+			  
+				<!-- Dropdown: Thế hệ -->
+				<div class="input-search input-search2">
+				  <div class="input-field">
+					<div class="label-dropdown">Thế hệ</div>
+					<select class="custom-dropdown">
+					  <option value="">Chọn thế hệ</option>
+					  <option value="f12">F12</option>
+					  <option value="f13">F13</option>
+					  <option value="f14">F14</option>
+					</select>
+				  </div>
+				</div>
+			  
+				<!-- Dropdown: Năm sinh -->
+				<div class="input-search">
+				  <div class="input-field">
+					<div class="label-dropdown">Năm sinh</div>
+					<select class="custom-dropdown">
+					  <option value="">Chọn năm sinh</option>
+					  <option value="2000">2000</option>
+					  <option value="2001">2001</option>
+					  <option value="2002">2002</option>
+					  <option value="2003">2003</option>
+					  <option value="2004">2004</option>
+					  <option value="2005">2005</option>
+					</select>
+				  </div>
+				</div>
+			  
+				<!-- Dropdown: Quê quán -->
+				<div class="input-search">
+				  <div class="input-field">
+					<div class="label-dropdown">Quê quán</div>
+					<select class="custom-dropdown">
+					  <option value="">Chọn quê quán</option>
+					  <option value="kien-giang">Kiên Giang</option>
+					  <option value="ha-noi">Hà Nội</option>
+					  <option value="tp-hcm">TP. Hồ Chí Minh</option>
+					  <option value="da-nang">Đà Nẵng</option>
+					</select>
+				  </div>
+				</div>
+			  
+				<!-- Nút lọc -->
+				<div class="button-filter-container">
+				  <div class="button-filter">Lọc</div>
+				</div>
+			  </div>
+			  
+		</div>
+
+</div>
