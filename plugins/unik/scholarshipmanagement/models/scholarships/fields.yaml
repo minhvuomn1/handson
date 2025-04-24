@@ -1,0 +1,21 @@
+tabs:
+    fields:
+        name:
+            label: Tên học bổng
+            type: text
+            span: auto
+            tab: Thông tin chính
+
+        type:
+            label: Loại học bổng
+            type: text
+            span: auto
+            tab: Thông tin chính
+
+        sponsor:
+            label: Nhà tài trợ
+            type: relation
+            nameFrom: name
+            showSearch: true
+            span: auto
+            tab: Thông tin chính

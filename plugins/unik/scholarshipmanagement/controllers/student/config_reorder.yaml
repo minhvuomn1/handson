@@ -1,0 +1,4 @@
+title: Student
+modelClass: Unik\Scholarshipmanagement\Models\Student
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,18 @@
+columns:
+    name:
+        label: Tên học bổng
+        type: text
+        searchable: true
+        sortable: true
+
+    type:
+        label: Loại học bổng
+        type: text
+        searchable: true
+        sortable: true
+
+    sponsor[name]:
+        label: Nhà tài trợ
+        type: text
+        searchable: true
+        sortable: false

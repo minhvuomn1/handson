@@ -1,0 +1,102 @@
+url = "quy-khuyen-hoc/danh-sach-hoc-bong/chi-tiet" 
+layout = "default" 
+title = "Quỹ khuyến học - Danh sách học bổng" [HomeBanner] 
+== 
+{% put styles %}
+<link
+    href="{{ 'assets/css/layouts/page/quy-khuyen-hoc/dshb.css'|theme }}"
+    rel="stylesheet"
+/>
+{% endput %} 
+{% put scripts %}
+<script
+    type="text/javascript"
+    src="{{ 'assets/javascript/layouts/page/quy-khuyen-hoc/dshb.js'|theme }}"
+></script>
+{% endput %} 
+{% component 'HomeBanner' %}
+
+<div class="dshb-page">
+    <div class="dshb-view">
+        <div class="dshb-container">
+            <div class="banner-page">
+                <div class="title-dshb">Danh sách học bổng</div>
+            </div>
+            
+
+            <div class="container py-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 container-chitiet">
+                    
+                    <div class="row">
+                        <!-- Ảnh chính -->
+                        <div class="col-12 mb-4">
+                          <img src="assets/images/scholarship-main.jpg" class="img-fluid rounded shadow" alt="Ảnh chính">
+                        </div>
+                    
+                        
+                        <div class="col-12">
+                          <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                    
+                              
+                              <div class="carousel-item active">
+                                <div class="d-flex gap-3">
+                                  <img src="assets/images/gallery1.jpg" class="img-thumbnail flex-fill" alt="">
+                                  <img src="assets/images/gallery2.jpg" class="img-thumbnail flex-fill" alt="">
+                                  <img src="assets/images/gallery3.jpg" class="img-thumbnail flex-fill" alt="">
+                                  <div class="position-relative flex-fill">
+                                    <img src="assets/images/gallery4.jpg" class="img-thumbnail w-100 h-100" alt="">
+                                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-dark bg-opacity-50 text-white fw-bold fs-5 rounded">
+                                      +10
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                    
+                           
+                    
+                            </div>
+                    
+                          
+                            <div class="carousel-indicators mt-3 justify-content-center">
+                              <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            
+                    <!-- Thông tin học sinh -->
+                    <div class="col-span-2 space-y-6">
+                        <div>
+                            <h2 class="text-2xl font-bold text-sky-600">Lê Dương Diễm</h2>
+                            <p><strong>Trường:</strong> THCS Phú Khánh</p>
+                            <p><strong>Khối:</strong> 8</p>
+                            <p><strong>Năm học:</strong> 2022–2023</p>
+                            <p><strong>Quê quán:</strong> Bến Tre</p>
+                            <p><strong>Nhà tài trợ học bổng:</strong> Hands On</p>
+                        </div>
+            
+                        <div>
+                            <h3 class="font-semibold text-lg">Thông tin cá nhân</h3>
+                            <p><strong>Giới tính:</strong> Nam</p>
+                            <p><strong>Ngày sinh:</strong> 07/07/2009</p>
+                            <p><strong>Hoàn cảnh gia đình:</strong> Gia đình hộ nghèo. Cha bệnh gan, không thể làm việc, không có thu nhập. Kinh tế gia đình phụ thuộc vào mẹ làm nghề may. Gia đình được hỗ trợ xây nhà tình thương.</p>
+                            <p><strong>Quê quán:</strong> Bến Tre</p>
+                        </div>
+            
+                        <div>
+                            <h3 class="font-semibold text-lg">Kết quả học tập & hoạt động xã hội</h3>
+                            <p><strong>Học lực:</strong> Giỏi</p>
+                            <p><strong>Năm học:</strong> 2021–2022</p>
+                            <p><strong>Hạnh kiểm:</strong> Tốt</p>
+                            <p><strong>Các giải thưởng và hoạt động:</strong> HSG các năm</p>
+                            <p><strong>CLB/Đoàn thể:</strong> Tham gia CLB Đoàn thanh niên xã</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

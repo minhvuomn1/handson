@@ -1,0 +1,10 @@
+name: Scholarships
+form: $/unik/scholarshipmanagement/models/scholarships/fields.yaml
+modelClass: Unik\Scholarshipmanagement\Models\Scholarships
+defaultRedirect: unik/scholarshipmanagement/scholarships
+create:
+    redirect: 'unik/scholarshipmanagement/scholarships/update/:id'
+    redirectClose: unik/scholarshipmanagement/scholarships
+update:
+    redirect: unik/scholarshipmanagement/scholarships
+    redirectClose: unik/scholarshipmanagement/scholarships

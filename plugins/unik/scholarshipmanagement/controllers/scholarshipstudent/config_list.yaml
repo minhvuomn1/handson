@@ -1,0 +1,12 @@
+title: ScholarshipStudent
+modelClass: Unik\Scholarshipmanagement\Models\ScholarshipStudent
+list: $/unik/scholarshipmanagement/models/scholarshipstudent/columns.yaml
+recordUrl: 'unik/scholarshipmanagement/scholarshipstudent/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

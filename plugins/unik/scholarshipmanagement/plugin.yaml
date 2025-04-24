@@ -1,0 +1,32 @@
+plugin:
+    name: 'unik.scholarshipmanagement::lang.plugin.name'
+    description: 'unik.scholarshipmanagement::lang.plugin.description'
+    author: Unik
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Học bổng'
+        url: /
+        icon: icon-life-ring
+        sideMenu:
+            side-menu-item:
+                label: 'Học sinh'
+                url: unik/scholarshipmanagement/student
+                icon: icon-user
+            side-menu-item2:
+                label: 'Học bổng'
+                url: unik/scholarshipmanagement/scholarships
+                icon: icon-star
+            side-menu-item3:
+                label: School
+                url: unik/scholarshipmanagement/school
+                icon: icon-home
+            side-menu-item4:
+                label: 'Nhà tài trợ'
+                url: unik/scholarshipmanagement/sponsors
+                icon: icon-diamond
+            side-menu-item5:
+                label: 'Học bổng cho học sinh'
+                url: /
+                icon: icon-sitemap

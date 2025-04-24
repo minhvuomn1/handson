@@ -1,0 +1,11 @@
+columns:
+    'student[name]':
+        label: 'Học sinh'
+        type: text
+        searchable: true
+        sortable: true
+    'scholarship[name]':
+        label: 'Học bổng'
+        type: text
+        searchable: true
+        sortable: true

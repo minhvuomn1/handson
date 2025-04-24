@@ -1,0 +1,13 @@
+fields:
+    student:
+        label: 'Học sinh'
+        type: relation
+        nameFrom: name
+        showSearch: true
+        span: auto
+    scholarship:
+        label: 'Học bổng'
+        type: relation
+        nameFrom: name
+        showSearch: true
+        span: auto

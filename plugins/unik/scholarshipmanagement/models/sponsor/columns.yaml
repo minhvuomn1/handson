@@ -1,0 +1,6 @@
+columns:
+    name:
+        label: Tên nhà tài trợ
+        type: text
+        searchable: true
+        sortable: true

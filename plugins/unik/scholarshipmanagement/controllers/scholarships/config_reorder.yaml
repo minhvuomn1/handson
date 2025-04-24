@@ -1,0 +1,4 @@
+title: Scholarships
+modelClass: Unik\Scholarshipmanagement\Models\Scholarships
+toolbar:
+    buttons: reorder_toolbar

@@ -1,4 +1,4 @@
-url = "quy-khuyen-hoc/dang-sach-hoc-bong" 
+url = "quy-khuyen-hoc/danh-sach-hoc-bong" 
 layout = "default" 
 title = "Quỹ khuyến học - Danh sách học bổng" 
 [HomeBanner] 
@@ -6,7 +6,11 @@ title = "Quỹ khuyến học - Danh sách học bổng"
 {% put styles %}
 	<link href="{{ 'assets/css/layouts/page/quy-khuyen-hoc/dshb.css'|theme }}" rel="stylesheet" />
 {% endput %}
+{% put scripts %}
+	<script type="text/javascript" src="{{ 'assets/javascript/layouts/page/quy-khuyen-hoc/dshb.js'|theme }}"></script>
+{% endput %}
 {% component 'HomeBanner' %}
+
 <div class="dshb-page">
 	<div class="dshb-view">
 		<div class="dshb-container">
@@ -101,6 +105,28 @@ title = "Quỹ khuyến học - Danh sách học bổng"
 				  <div class="button-filter">Lọc</div>
 				</div>
 			  </div>
+			  <!-- <div id="scholarship-list" class="scholarship-list"></div> -->
+			 <!-- Ẩn template mẫu card -->
+				<template id="student-card-template">
+					<a class="student-card" href="#">
+					<img src="" alt="Logo Hands On" class="logo" />
+					<h3 class="student-name"></h3>
+					<div class="student-school"></div>
+					<div class="info"><strong>Khối</strong> <span class="info-value grade"></span></div>
+					<div class="info"><strong>Năm sinh</strong> <span class="info-value dob"></span></div>
+					<div class="info"><strong>Năm nhận học bổng</strong> <span class="info-value generation"></span></div>
+					<div class="info"><strong>Khu vực</strong> <span class="info-value location"></span></div>
+					<div class="info"><strong>Nhà tài trợ học bổng</strong> <span class="info-value sponsor"></span></div>
+					<div class="scholarship-type"></div>
+					</a>
+				</template>
+				
+				
+				<img id="logo-template" src="{{ 'assets/images/logo.png'|theme }}" style="display: none;" />
+				
+				<!-- Nơi hiển thị danh sách học bổng -->
+				<div id="scholarship-list" class="scholarship-list"></div>
+  
 			  
 		</div>
 

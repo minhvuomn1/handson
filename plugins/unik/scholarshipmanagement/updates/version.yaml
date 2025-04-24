@@ -1,0 +1,29 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table unik_scholarshipmanagement_students'
+    - builder_table_create_unik_scholarshipmanagement_students.php
+1.0.3:
+    - 'Updated table unik_scholarshipmanagement_students'
+    - builder_table_update_unik_scholarshipmanagement_students.php
+1.0.4:
+    - 'Updated table unik_scholarshipmanagement_students'
+    - builder_table_update_unik_scholarshipmanagement_students_2.php
+1.0.5:
+    - 'Created table unik_scholarshipmanagement_scholarships'
+    - builder_table_create_unik_scholarshipmanagement_scholarships.php
+1.0.6:
+    - 'Updated table unik_scholarshipmanagement_scholarships'
+    - builder_table_update_unik_scholarshipmanagement_scholarships.php
+1.0.7:
+    - 'Created table unik_scholarshipmanagement_school'
+    - builder_table_create_unik_scholarshipmanagement_school.php
+1.0.8:
+    - 'Created table unik_scholarshipmanagement_sponsors'
+    - builder_table_create_unik_scholarshipmanagement_sponsors.php
+1.0.9:
+    - 'Created table unik_scholarshipmanagement_scholarship_student'
+    - builder_table_create_unik_scholarshipmanagement_scholarship_student.php
+1.0.10:
+    - 'Updated table unik_scholarshipmanagement_students'
+    - builder_table_update_unik_scholarshipmanagement_students_3.php

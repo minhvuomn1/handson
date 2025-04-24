@@ -1,0 +1,39 @@
+tabs:
+    fields:
+        name:
+            label: Họ tên
+            type: text
+            span: auto
+            tab: Thông tin chung
+
+        dob:
+            label: Ngày sinh
+            type: datepicker
+            mode: date
+            span: auto
+            tab: Thông tin chung
+
+        grade:
+            label: Lớp
+            type: number
+            span: auto
+            tab: Thông tin chung
+
+        generation:
+            label: Khóa
+            type: text
+            span: auto
+            tab: Thông tin chung
+
+        location:
+            label: Khu vực
+            type: text
+            span: auto
+            tab: Thông tin chung
+
+        school:
+            label: Trường học
+            type: relation
+            nameFrom: name
+            span: auto
+            tab: Thông tin chung

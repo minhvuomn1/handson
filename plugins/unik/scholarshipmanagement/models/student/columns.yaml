@@ -1,0 +1,37 @@
+columns:
+    name:
+        label: Họ tên
+        type: text
+        searchable: true
+        sortable: true
+
+    dob:
+        label: Ngày sinh
+        type: date
+        searchable: false
+        sortable: true
+
+    grade:
+        label: Lớp
+        type: number
+        searchable: false
+        sortable: true
+
+    generation:
+        label: Khóa
+        type: text
+        searchable: true
+        sortable: true
+
+    location:
+        label: Khu vực
+        type: text
+        searchable: true
+        sortable: true
+
+    school[name]:
+        label: Trường học
+        type: text
+        searchable: true
+        sortable: false
+        

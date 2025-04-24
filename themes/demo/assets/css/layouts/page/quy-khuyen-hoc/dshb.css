@@ -39,9 +39,9 @@
     align-self: stretch;
     flex-shrink: 0;
     position: relative;
-    left: 10%;
+    left: 5%;
     top: 50px;
-    width: 80%;
+    width: 90%;
 }
 
 .auto-added-frame {
@@ -258,4 +258,134 @@
     outline: none;
     border-color: #2bbddc;
     box-shadow: 0 0 0 2px rgba(43, 189, 220, 0.2);
+  }
+
+  /* CHI TIẾT HỌC BỔNG */
+  
+  .container-chitiet{
+    display: flex;;
+    gap: 40px;
+  }
+  .row{
+    width: 100%;;
+  }
+  .scholarship-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    position: relative;
+    top: 50px;
+  }
+  .student-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .student-card .logo {
+    width: 168px;
+    display: block;
+    margin: 0 auto 10px;
+
+  }
+  .student-name {
+    color: #00AEEF;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .student-school {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+  }
+  .info {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+  }
+  .scholarship-type {
+    margin-top: 12px;
+    padding: 8px 12px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .scholarship-type.full {
+    background-color: #00AEEF;
+    color: white;
+  }
+  .scholarship-type.partial {
+    background-color: #eee;
+    color: #aaa;
+  }
+/* 
+  CHI TIẾT HỌC BỔNG */
+
+  .student-detail {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+  }
+
+  .student-detail .main-photo {
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    max-height: 400px;
+  }
+
+  .student-detail .gallery img {
+    height: 80px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  .student-detail .gallery .more {
+    position: relative;
+  }
+
+  .student-detail .gallery .more .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .student-detail h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0ea5e9; /* Sky-500 */
+  }
+
+  .student-detail h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+
+  .student-detail p {
+    margin-bottom: 0.25rem;
+    line-height: 1.5;
+  }
+
+  .student-detail strong {
+    color: #222;
+  }
+
+  /* Responsive tweak */
+  @media (max-width: 768px) {
+    .student-detail .gallery img {
+      height: 60px;
+    }
   }
