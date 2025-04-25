@@ -35,8 +35,8 @@ tabs:
         sex:
             label: 'Giới tính'
             options:
-                male: Nam
-                female: Nữ
+                Nam: Nam
+                Nữ: Nữ
             showSearch: true
             span: auto
             type: dropdown

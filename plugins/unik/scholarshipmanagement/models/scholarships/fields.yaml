@@ -8,8 +8,8 @@ tabs:
         type:
             label: 'Loại học bổng'
             options:
-                toanphan: 'Học bổng toàn phần'
-                banphan: 'Học bổng bán phần'
+                'Học bổng toàn phần': toanphan
+                'Học bổng bán phần': banphan
             showSearch: true
             span: auto
             type: dropdown

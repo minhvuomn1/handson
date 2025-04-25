@@ -14,14 +14,10 @@ class Student extends Model
     protected $dates = ['deleted_at'];
 
 
-    /**
-     * @var string The database table used by the model.
-     */
+
     public $table = 'unik_scholarshipmanagement_students';
 
-    /**
-     * @var array Validation rules
-     */
+ 
     public $rules = [
         'name' => 'required',
         'dob' => 'required|date',
@@ -29,12 +25,11 @@ class Student extends Model
         'generation' => 'required',
         'location' => 'required',
     ];
-     /**
-     * @var array Relations
-     */
+   
     public $belongsTo = [
         'school' => [
-            'Unik\Scholarshipmanagement\Models\School'
+            'Unik\Scholarshipmanagement\Models\School',
+            'key' => 'school_id',
         ],
     ];
 

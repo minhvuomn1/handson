@@ -11,7 +11,7 @@ use System\Classes\PluginBase;
 class Plugin extends PluginBase
 {
     public function registerComponents()
-    {
+    {  
     }
 
     public function registerSettings()
@@ -19,24 +19,54 @@ class Plugin extends PluginBase
     }
     public function boot()
     {
-    Route::get('/api/students', function () {
-        return \ScholarshipManagement\Models\Student::with('school')->get();
-    });
-
-    Route::get('/api/scholarships', function () {
-        return \ScholarshipManagement\Models\Scholarships::with(['sponsor'])->get();
-    });
-
-    Route::get('/api/scholarship-students', function () {
-        return \ScholarshipManagement\Models\ScholarshipStudent::with(['student', 'scholarship'])->get();
-    });
-
-    Route::get('/api/schools', function () {
-        return \ScholarshipManagement\Models\School::all();
-    });
-
-    Route::get('/api/sponsors', function () {
-        return \ScholarshipManagement\Models\Sponsors::all();
-    });
+        Route::get('/api/students', function () {
+            return Student::with('school')->get();
+        });
+        
+        Route::get('/api/scholarships', function () {
+            return Scholarships::with(['sponsors'])->get();
+        });
+        
+        Route::get('/api/scholarship-students', function () {
+            return ScholarshipStudent::with(['student.school', 'scholarship.sponsors'])->get()->map(function ($item) {
+                return [
+                    'id' => $item->id,
+                    'created_at' => $item->created_at,
+                    'updated_at' => $item->updated_at,
+                    'deleted_at' => $item->deleted_at,
+                    'student_id' => $item->student_id,
+                    'scholarship_id' => $item->scholarship_id,
+                    'result_activity' => $item->result_activity,
+                    'student' => [
+                        'id' => $item->student->id,
+                        'name' => $item->student->name,
+                        'dob' => $item->student->dob,
+                        'grade' => $item->student->grade,
+                        'location' => $item->student->location,
+                        'generation' => $item->student->generation,
+                        'sex' => $item->student->sex,
+                        'family_manner' => $item->student->family_manner,
+                        'school' => $item->student->school, // Now includes full school info
+                    ],
+                    'scholarship' => [
+                        'id' => $item->scholarship->id,
+                        'name' => $item->scholarship->name,
+                        'type' => $item->scholarship->type,
+                        'sponsors_id' => $item->scholarship->sponsors_id,
+                        'created_at' => $item->scholarship->created_at,
+                        'updated_at' => $item->scholarship->updated_at,
+                        'sponsors' => $item->scholarship->sponsors, // Now includes full sponsor info
+                    ],
+                ];
+            });
+        });
+        
+        Route::get('/api/schools', function () {
+            return School::all();
+        });
+        
+        Route::get('/api/sponsors', function () {
+            return Sponsors::all();
+        });
     }
 }

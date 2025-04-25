@@ -1,18 +1,16 @@
 columns:
     name:
-        label: Tên học bổng
+        label: 'Tên học bổng'
         type: text
         searchable: true
         sortable: true
-
     type:
-        label: Loại học bổng
+        label: 'Loại học bổng'
         type: text
         searchable: true
         sortable: true
-
-    sponsors[name]:
-        label: Nhà tài trợ
+    'sponsors[name]':
+        label: 'Nhà tài trợ'
         type: text
         searchable: true
         sortable: false

@@ -215,29 +215,17 @@
     overflow: visible;
 }
 
-.button-filter-container {
-    background: var(--xxxxx, #2bbddc);
-    border-radius: 5px;
-    border-style: solid;
-    border-color: transparent;
-    border-width: 0.83px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    gap: 8.4px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-}
+
 
 .button-filter {
-    color: var(--miscellaneous-floating-tab-pill-fill, #ffffff);
-    text-align: left;
-    font-size: 11px;
-    line-height: 20.09px;
-    font-weight: 400;
-    position: relative;
+  background-color: #2bbddc;
+  color: #fff;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 .custom-dropdown {
     width: 100%;
@@ -382,7 +370,7 @@
   .student-detail strong {
     color: #222;
   }
-
+  
   /* Responsive tweak */
   @media (max-width: 768px) {
     .student-detail .gallery img {
