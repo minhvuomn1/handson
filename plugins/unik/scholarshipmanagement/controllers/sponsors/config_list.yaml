@@ -1,7 +1,7 @@
-title: Sponsor
-modelClass: Unik\Scholarshipmanagement\Models\Sponsor
-list: $/unik/scholarshipmanagement/models/sponsor/columns.yaml
-recordUrl: 'unik/scholarshipmanagement/sponsor/update/:id'
+title: Sponsors
+modelClass: Unik\Scholarshipmanagement\Models\Sponsors
+list: $/unik/scholarshipmanagement/models/sponsors/columns.yaml
+recordUrl: 'unik/scholarshipmanagement/sponsors/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

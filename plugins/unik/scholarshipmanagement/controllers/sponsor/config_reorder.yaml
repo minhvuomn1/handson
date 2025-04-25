@@ -1,4 +1,0 @@
-title: Sponsor
-modelClass: Unik\Scholarshipmanagement\Models\Sponsor
-toolbar:
-    buttons: reorder_toolbar

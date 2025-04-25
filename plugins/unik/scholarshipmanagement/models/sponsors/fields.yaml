@@ -1,5 +1,5 @@
 fields:
     name:
-        label: Tên nhà tài trợ
+        label: 'Tên nhà tài trợ'
         span: auto
         type: text

@@ -1,0 +1,10 @@
+name: Sponsors
+form: $/unik/scholarshipmanagement/models/sponsors/fields.yaml
+modelClass: Unik\Scholarshipmanagement\Models\Sponsors
+defaultRedirect: unik/scholarshipmanagement/sponsors
+create:
+    redirect: 'unik/scholarshipmanagement/sponsors/update/:id'
+    redirectClose: unik/scholarshipmanagement/sponsors
+update:
+    redirect: unik/scholarshipmanagement/sponsors
+    redirectClose: unik/scholarshipmanagement/sponsors

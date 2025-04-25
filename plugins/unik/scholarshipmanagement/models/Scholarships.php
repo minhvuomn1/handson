@@ -23,15 +23,15 @@ class Scholarships extends Model
     public $rules = [
         'name' => 'required',
         'type' => 'required',
-        'sponsor_id' => 'required|exists:unik_scholarshipmanagement_sponsors,id',
+        'sponsors_id' => 'required|exists:unik_scholarshipmanagement_sponsors,id',
     ];
 
     /**
      * @var array Relations
      */
     public $belongsTo = [
-        'sponsor' => [
-            'Unik\Scholarshipmanagement\Models\Sponsor'
+        'sponsors' => [
+            'Unik\Scholarshipmanagement\Models\Sponsors'
         ],
     ];
 

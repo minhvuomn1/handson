@@ -11,7 +11,7 @@ columns:
         searchable: true
         sortable: true
 
-    sponsor[name]:
+    sponsors[name]:
         label: Nhà tài trợ
         type: text
         searchable: true

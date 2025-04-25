@@ -1,39 +1,49 @@
 tabs:
     fields:
         name:
-            label: Họ tên
+            label: 'Họ tên'
             type: text
             span: auto
-            tab: Thông tin chung
-
+            tab: 'Thông tin chung'
         dob:
-            label: Ngày sinh
+            label: 'Ngày sinh'
             type: datepicker
             mode: date
             span: auto
-            tab: Thông tin chung
-
+            tab: 'Thông tin chung'
         grade:
             label: Lớp
             type: number
             span: auto
-            tab: Thông tin chung
-
+            tab: 'Thông tin chung'
         generation:
             label: Khóa
             type: text
             span: auto
-            tab: Thông tin chung
-
+            tab: 'Thông tin chung'
         location:
-            label: Khu vực
+            label: 'Khu vực'
             type: text
             span: auto
-            tab: Thông tin chung
-
+            tab: 'Thông tin chung'
         school:
-            label: Trường học
+            label: 'Trường học'
             type: relation
             nameFrom: name
             span: auto
-            tab: Thông tin chung
+            tab: 'Thông tin chung'
+        sex:
+            label: 'Giới tính'
+            options:
+                male: Nam
+                female: Nữ
+            showSearch: true
+            span: auto
+            type: dropdown
+            tab: 'Thông tin chung'
+        family_manner:
+            label: 'Hoàn cảnh gia đình'
+            size: ''
+            span: auto
+            type: textarea
+            tab: 'Thông tin chung'

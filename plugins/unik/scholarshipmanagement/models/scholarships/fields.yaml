@@ -1,21 +1,23 @@
 tabs:
     fields:
         name:
-            label: Tên học bổng
+            label: 'Tên học bổng'
             type: text
             span: auto
-            tab: Thông tin chính
-
+            tab: 'Thông tin chính'
         type:
-            label: Loại học bổng
-            type: text
+            label: 'Loại học bổng'
+            options:
+                toanphan: 'Học bổng toàn phần'
+                banphan: 'Học bổng bán phần'
+            showSearch: true
             span: auto
-            tab: Thông tin chính
-
-        sponsor:
-            label: Nhà tài trợ
+            type: dropdown
+            tab: 'Thông tin chính'
+        sponsors:
+            label: 'Nhà tài trợ'
             type: relation
             nameFrom: name
             showSearch: true
             span: auto
-            tab: Thông tin chính
+            tab: 'Thông tin chính'

@@ -28,5 +28,5 @@ navigation:
                 icon: icon-diamond
             side-menu-item5:
                 label: 'Học bổng cho học sinh'
-                url: /
-                icon: icon-sitemap
+                url: unik/scholarshipmanagement/scholarshipstudent
+                icon: icon-gift

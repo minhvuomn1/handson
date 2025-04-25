@@ -11,3 +11,8 @@ fields:
         nameFrom: name
         showSearch: true
         span: auto
+    result_activity:
+        label: 'Kết quả học tập & hoạt động xã hội'
+        size: ''
+        span: auto
+        type: textarea

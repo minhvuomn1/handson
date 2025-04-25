@@ -9,3 +9,7 @@ columns:
         type: text
         searchable: true
         sortable: true
+    result_activity:
+        label: 'Kết quả học tập & hoạt động xã hội'
+        type: text
+        searchable: false

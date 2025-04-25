@@ -144,6 +144,7 @@ class Plugin extends PluginBase
             return ucfirst($message);
         });
     }
+    
 
     public function register()
     {
@@ -154,4 +155,6 @@ class Plugin extends PluginBase
             $combiner->registerBundle('$/rainlab/builder/assets/js/build.js');
         });
     }
+    
+    
 }
