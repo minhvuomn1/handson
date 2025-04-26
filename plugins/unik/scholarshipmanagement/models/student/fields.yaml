@@ -47,3 +47,24 @@ tabs:
             span: auto
             type: textarea
             tab: 'Thông tin chung'
+        school_year:
+            label: 'Năm học'
+            span: auto
+            type: text
+            tab: 'Thông tin chung'
+        avt:
+            label: Ảnh đại diện
+            type: fileupload
+            mode: image
+            imageWidth: 200
+            imageHeight: 200
+            fileTypes:
+                - png
+                - jpg
+                - jpeg
+            mimeTypes: 'png,jpg,jpeg'
+            span: auto
+            thumbOptions:
+                mode: crop
+                extension: auto
+            tab: 'Thông tin chung'

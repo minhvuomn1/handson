@@ -369,6 +369,18 @@
   .student-detail strong {
     color: #222;
   }
+  .gallery-images {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .gallery-thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+  }
   
   /* Responsive tweak */
   @media (max-width: 768px) {

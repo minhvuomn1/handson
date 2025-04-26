@@ -39,3 +39,8 @@ columns:
         type: text
         searchable: true
         sortable: true
+    school_year:
+        label: 'Năm học'
+        type: text
+        searchable: true
+        sortable: true

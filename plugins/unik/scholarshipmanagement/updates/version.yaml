@@ -39,3 +39,12 @@
 1.0.14:
     - 'Updated table unik_scholarshipmanagement_scholarships'
     - builder_table_update_unik_scholarshipmanagement_scholarships2.php
+1.0.15:
+    - 'Updated table unik_scholarshipmanagement_students'
+    - builder_table_update_unik_scholarshipmanagement_students_6.php
+1.0.16:
+    - 'Updated table unik_scholarshipmanagement_scholarship_student'
+    - builder_table_update_unik_scholarshipmanagement_scholarship_student_2.php
+1.0.17:
+    - 'Updated table unik_scholarshipmanagement_scholarship_student'
+    - builder_table_update_unik_scholarshipmanagement_scholarship_student_3.php

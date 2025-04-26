@@ -16,3 +16,13 @@ fields:
         size: ''
         span: auto
         type: textarea
+    images:
+        label: Banner
+        type: fileupload
+        span: full
+        mode: image
+        fileTypes:
+            - png
+            - jpg
+            - jpeg
+        mimeTypes: 'png,jpg,jpeg'

@@ -42,4 +42,7 @@ class Student extends Model
             'otherKey' => 'scholarship_id',
         ],
     ];
+    public $attachOne = [
+        'avt' => 'System\Models\File', 
+    ];
 }

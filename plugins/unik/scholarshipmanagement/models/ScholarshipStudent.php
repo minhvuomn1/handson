@@ -27,4 +27,7 @@ class ScholarshipStudent extends Model
             'Unik\Scholarshipmanagement\Models\Scholarships'
         ]
     ];
+    public $attachMany = [
+        'images' => 'System\Models\File',
+    ];   
 }

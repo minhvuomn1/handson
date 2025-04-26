@@ -37,6 +37,12 @@ class Plugin extends PluginBase
                     'student_id' => $item->student_id,
                     'scholarship_id' => $item->scholarship_id,
                     'result_activity' => $item->result_activity,
+                    'images' => $item->images->map(function ($img) {
+                        return [
+                            'url' => $img->getPath(),
+                            'thumb' => $img->getThumb(300, 200, 'crop'),
+                        ];
+                    }),
                     'student' => [
                         'id' => $item->student->id,
                         'name' => $item->student->name,
@@ -44,9 +50,11 @@ class Plugin extends PluginBase
                         'grade' => $item->student->grade,
                         'location' => $item->student->location,
                         'generation' => $item->student->generation,
+                        'school_year' => $item->student->school_year,
                         'sex' => $item->student->sex,
                         'family_manner' => $item->student->family_manner,
                         'school' => $item->student->school, // Now includes full school info
+                        'avt' => $item->student->avt ? $item->student->avt->getPath() : null,
                     ],
                     'scholarship' => [
                         'id' => $item->scholarship->id,
