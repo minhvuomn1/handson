@@ -96,23 +96,7 @@
     position: relative;
 }
 
-.input-field {
-    background: var(--slds-g-color-surface-container-1, #ffffff);
-    border-radius: 5px;
-    border-style: solid;
-    border-color: var(--miscellaneous-keyboard-accessory-bar-selection, #ebedf0);
-    border-width: 1px;
-    padding: 2px 10px 2px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-    align-items: flex-start;
-    justify-content: center;
-    align-self: stretch;
-    flex-shrink: 0;
-    position: relative;
-    overflow: hidden;
-}
+
 
 .label-dropdown {
     color: var(--miscellaneous-tab-unselected, #999999);
@@ -214,7 +198,23 @@
     overflow: visible;
 }
 
-
+.input-field {
+  background: var(--slds-g-color-surface-container-1, #ffffff);
+  border-radius: 5px;
+  border-style: solid;
+  border-color: var(--miscellaneous-keyboard-accessory-bar-selection, #ebedf0);
+  border-width: 1px;
+  padding: 2px 10px 2px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
 
 .button-filter {
   background-color: #2bbddc;
@@ -381,7 +381,7 @@
     object-fit: cover;
     cursor: pointer;
   }
-  
+
   /* Responsive tweak */
   @media (max-width: 768px) {
     .student-detail .gallery img {
@@ -395,5 +395,46 @@
       gap: 10px;
       align-items: left;
     }
+    .input-field {
+      background:none;
+      border-radius: none;
+      border-style: none;
+      border-color: none;
+      border-width: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: center;
+      align-self: stretch;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+  }
+  .button-filter{
+    width: 100%;
+  }
+  .auto-added-frame{
+    display: none;
+  }
+  .label-filter{
+    display: none;
+  }
+  .container-chitiet{
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery-images{
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  .avatar-container{
+    text-align: center;
+  }
+  .avatar-container img{
+    width: 100px !important;
+    height: 100px !important;
+  }
     
   }
